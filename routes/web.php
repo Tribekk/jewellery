@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StoneModelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +21,7 @@ Route::get('/', function () {
 
 //Каталог камней
 Route::prefix('/stone')->group(function () {
-    Route::get('/', function () {
-        return view('stone.stone');
-    })->name('stone');
+    Route::get('/', [StoneModelController::class, 'index'])->name('stone');
 });
 
 //Камни и украшения

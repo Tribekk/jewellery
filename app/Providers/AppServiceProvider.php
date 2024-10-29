@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\StoneModel;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('components.header', function ($view) {
+            $stones = StoneModel::all(); // или нужный вам запрос к базе данных
+            $view->with('stones', $stones);
+        });
     }
 }

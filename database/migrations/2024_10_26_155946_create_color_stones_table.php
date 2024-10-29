@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('menus', function (Blueprint $table) {
+        Schema::create('color_stones', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('href')->unique();
-            $table->text('class');
+            $table->string('uriName')->unique();
+            $table->string('picture')->unique()->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('menus');
+        Schema::dropIfExists('color_stones');
     }
 };

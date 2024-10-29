@@ -93,3 +93,9 @@ footer .footer-3{
 a:hover{
     text-decoration: underline;
 }
+.wrap{
+    flex-wrap: wrap;
+}
+.row-4{
+    width: 25%;
+}

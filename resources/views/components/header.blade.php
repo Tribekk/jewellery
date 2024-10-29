@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('src/css/main.css')}}">
-    <script src="{{asset('src/js/jQuery.js')}}"></script>
+    <script src="{{asset('src/js/jQuery.js')}}" async></script>
     @vite('resources/css/app.css')
     <title>{{$title}}</title>
 </head>
@@ -30,4 +30,9 @@
         <li><a href="{{route('cart')}}">Корзина</a></li>
     </ul>
     </div>
+{{--    <div>--}}
+{{--        @foreach($stones as $stone)--}}
+{{--            {{$stone->name}}--}}
+{{--        @endforeach--}}
+{{--    </div>--}}
 </header>

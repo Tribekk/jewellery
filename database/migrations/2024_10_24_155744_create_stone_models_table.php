@@ -13,17 +13,24 @@ return new class extends Migration
     {
         Schema::create('stone_models', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->float('mass');
-            $table->text('color');
-            $table->string('purity');
-            $table->string('ennoblement');
-            $table->string('сut');
-            $table->float('height');
-            $table->float('width');
-            $table->float('length');
-            $table->text('birth');
-            $table->string('article')->unique();
+            $table->string('name')->unique(); // название
+            $table->text('description'); // описание
+            $table->float('mass'); // масса
+            $table->text('color'); // цвет
+            $table->string('purity'); // чистота
+            $table->string('ennoblement'); // Облагораживание (например: термообработка)
+            $table->string('cut'); // Огранка
+            $table->float('height'); // |             высота
+            $table->float('width'); //  |---> размеры ширина
+            $table->float('length'); // |             длинна
+            $table->text('birth'); // Происхождение
+            $table->integer('price'); // Цена
+            $table->boolean('visible')->default(true); // Признак видимости товара
+            $table->string('article')->unique(); // Артикул
+            $table->string('preview_photo'); // Главное фото
+            $table->string('next_photo'); // Следующее фото todo возможно переделаю под массив фоток
+            $table->string('color_index');
+            $table->string('type_index');
             $table->timestamps();
         });
     }
