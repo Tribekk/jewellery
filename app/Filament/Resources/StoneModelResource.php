@@ -23,63 +23,84 @@ class StoneModelResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('cut')
+                Forms\Components\Select::make('cut')
+                    ->label('Огранка')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('color_index')
+                    ->relationship('cutBelongsTo', 'name'),
+                Forms\Components\Select::make('color_index')
+                    ->label('Цвет в фильтре')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('type_index')
+                    ->relationship('colorBelongsTo', 'name'),
+                Forms\Components\Select::make('type_index')
+                    ->label('Тип камня')
                     ->required()
-                    ->maxLength(255),
+                    ->relationship('colorBelongsTo', 'name'),
                 Forms\Components\TextInput::make('name')
+                    ->label('Полное название')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
+                    ->label('Описание')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('mass')
+                    ->label('Вес')
+                    ->prefix('карат')
                     ->required()
                     ->numeric(),
                 Forms\Components\Textarea::make('color')
+                    ->label('Полное описание цвета')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('purity')
+                    ->label('Чистота')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('ennoblement')
+                    ->label('Облагораживание')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('height')
+                    ->label('Высота')
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('width')
+                    ->label('Ширина')
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('length')
+                    ->label('Длинна')
                     ->required()
                     ->numeric(),
                 Forms\Components\Textarea::make('birth')
+                    ->label('Месторождения')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('price')
+                    ->label('Цена')
                     ->required()
                     ->numeric()
-                    ->prefix('$'),
+                    ->prefix('Р.'),
                 Forms\Components\Toggle::make('visible')
+                    ->label('Активность')
                     ->required(),
                 Forms\Components\TextInput::make('article')
-                    ->required()
+                    ->label('Артикул')
+                    ->disabled()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('preview_photo')
+                Forms\Components\FileUpload::make('preview_photo')
+                    ->label('Главное фото')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('next_photo')
+                    ->image()
+                    ->imageEditor(),
+                Forms\Components\FileUpload::make('next_photo')
+                    ->label('Доп. фото')
                     ->required()
-                    ->maxLength(255),
+                    ->image()
+                    ->imageEditor(),
             ]);
     }
 
@@ -87,52 +108,83 @@ class StoneModelResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('cut')
+                Tables\Columns\TextColumn::make('cutBelongsTo.name')
+                    ->label('Огранка')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('color_index')
+
+                Tables\Columns\TextColumn::make('colorBelongsTo.name')
+                    ->label('Цвет')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('type_index')
+
+                Tables\Columns\TextColumn::make('typeBelongsTo.name')
+                    ->label('Тип камня')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('name')
+                    ->label('Название')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('mass')
+                    ->label('Вес')
                     ->numeric()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('purity')
+                    ->label('Чистота')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('ennoblement')
+                    ->label('Облагораживание')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('height')
+                    ->label('Высота')
                     ->numeric()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('width')
+                    ->label('Ширина')
                     ->numeric()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('length')
+                    ->label('Длина')
                     ->numeric()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('price')
-                    ->money()
+                    ->label('Цена')
+                    ->money('RUB')
                     ->sortable(),
+
                 Tables\Columns\IconColumn::make('visible')
+                    ->label('Активность')
                     ->boolean(),
+
                 Tables\Columns\TextColumn::make('article')
+                    ->label('Артикул')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('preview_photo')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('next_photo')
-                    ->searchable(),
+
+                Tables\Columns\ImageColumn::make('preview_photo')
+                    ->label('Главное фото'),
+
+                Tables\Columns\ImageColumn::make('next_photo')
+                    ->label('Следующее фото'),
+
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Дата создания')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Дата обновления')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                // добавьте фильтры, если нужно
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
