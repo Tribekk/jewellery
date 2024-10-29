@@ -47,7 +47,31 @@ header .logo_main{
 .menu_top ul li{
     margin: 15px;
 }
-.menu_top ul li:hover, .footer_main a:hover{
+.modal_menu{
+    display: none;
+    position: absolute;
+    z-index: 200;
+    width: 50vw;
+    background: white;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px;
+}
+.modal_menu ul{
+    flex-wrap: wrap;
+}
+.modal_menu ul li{
+    width: 25%;
+}
+.modal_menu ul ul{
+    display: block;
+}
+.modal_menu_hover:hover{
+    .modal_menu{
+        display: block;
+    }
+}
+.menu_top ul li a:hover, .footer_main a:hover{
     text-decoration: underline;
 }
 .menu_top ul li a.active, .footer_main a.active{

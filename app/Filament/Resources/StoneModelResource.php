@@ -34,7 +34,7 @@ class StoneModelResource extends Resource
                 Forms\Components\Select::make('type_index')
                     ->label('Тип камня')
                     ->required()
-                    ->relationship('colorBelongsTo', 'name'),
+                    ->relationship('typeBelongsTo', 'name'),
                 Forms\Components\TextInput::make('name')
                     ->label('Полное название')
                     ->required()

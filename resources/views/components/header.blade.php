@@ -21,21 +21,21 @@
     </div>
     <div class="menu_top">
     <ul>
-        <li>
+        <li class="modal_menu_hover">
             <a href="{{route('stone')}}">Каталог камней</a>
-        <div>
-            <ul>
-                @foreach($typesWithColors as $typeWithColors)
-                    <li>{{ $typeWithColors['type'] }}
-                        <ul>
-                            @foreach($typeWithColors['colors'] as $color)
-                                <li>{{ $color->name }}</li>
-                            @endforeach
-                        </ul>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
+            <div class="modal_menu">
+                <ul>
+                    @foreach($typesWithColors as $typeWithColors)
+                        <li><a href="" >{{ $typeWithColors['type'] }}</a>
+                            <ul>
+                                @foreach($typeWithColors['colors'] as $color)
+                                    <li><a href="">{{ $color->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
         </li>
         <li><a href="{{route('StonesAndDecorations')}}">Камни и украшения</a></li>
         <li><a href="{{route('JewelryCatalog')}}">Каталог ювелирных изделий</a></li>

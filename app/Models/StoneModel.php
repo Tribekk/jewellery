@@ -18,7 +18,7 @@ class StoneModel extends Model
             'color',
             'purity',
             'ennoblement',
-            'сut',
+            'cut',
             'height',
             'width',
             'length',
@@ -28,6 +28,8 @@ class StoneModel extends Model
             'article',
             'preview_photo',
             'next_photo',
+            'color_index',
+            'type_index',
         ];
 
     public function colorBelongsTo(): BelongsTo
@@ -50,9 +52,9 @@ class StoneModel extends Model
         static::saving(function ($model) {
             if (empty($model->article)) {
                 // Извлекаем первые 2 буквы типа камня
-                $typeAbbreviation = substr($model->typeBelongsTo->name ?? '', 0, 2);
+                $typeAbbreviation = substr($model->typeBelongsTo->uriName ?? '', 0, 2);
                 // Берем количество карат и округляем его до 2-х знаков
-                $mass = number_format($model->mass, 2);
+                $mass = number_format($model->mass);
                 // Используем id записи, если он доступен, или создаем временный идентификатор
                 $id = $model->id ?? StoneModel::max('id') + 1;
 
