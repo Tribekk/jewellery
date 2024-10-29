@@ -19,6 +19,6 @@ class ColorStone extends Model
 
     public function stones() :HasMany
     {
-        return $this->hasMany(StoneModel::class);
+        return $this->hasMany(StoneModel::class, 'color_index', 'uriName');
     }
 }

@@ -21,7 +21,22 @@
     </div>
     <div class="menu_top">
     <ul>
-        <li><a href="{{route('stone')}}">Каталог камней</a></li>
+        <li>
+            <a href="{{route('stone')}}">Каталог камней</a>
+        <div>
+            <ul>
+                @foreach($typesWithColors as $typeWithColors)
+                    <li>{{ $typeWithColors['type'] }}
+                        <ul>
+                            @foreach($typeWithColors['colors'] as $color)
+                                <li>{{ $color->name }}</li>
+                            @endforeach
+                        </ul>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+        </li>
         <li><a href="{{route('StonesAndDecorations')}}">Камни и украшения</a></li>
         <li><a href="{{route('JewelryCatalog')}}">Каталог ювелирных изделий</a></li>
         <li><a href="{{route('about')}}">О нас</a></li>

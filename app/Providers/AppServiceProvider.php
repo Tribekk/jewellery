@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\StoneModel;
+use App\Models\TypeStone;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,8 +23,16 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer('components.header', function ($view) {
-            $stones = StoneModel::all(); // или нужный вам запрос к базе данных
-            $view->with('stones', $stones);
+            $typesWithColors = TypeStone::with(['stones.colorBelongsTo'])
+                ->get()
+                ->map(function ($type) {
+                    $uniqueColors = $type->stones->pluck('colorBelongsTo')->unique('id');
+                    return [
+                        'type' => $type->name,
+                        'colors' => $uniqueColors,
+                    ];
+                });
+            $view->with('typesWithColors', $typesWithColors);
         });
     }
 }
