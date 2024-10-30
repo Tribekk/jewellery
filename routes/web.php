@@ -22,6 +22,7 @@ Route::get('/', function () {
 //Каталог камней
 Route::prefix('/stone')->group(function () {
     Route::get('/', [StoneModelController::class, 'index'])->name('stone');
+    Route::get('/{type}/{color?}', [StoneModelController::class, 'filter'])->name('stones.filter');
 });
 
 //Камни и украшения

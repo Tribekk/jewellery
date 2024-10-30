@@ -29,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
                     $uniqueColors = $type->stones->pluck('colorBelongsTo')->unique('id');
                     return [
                         'type' => $type->name,
+                        'uriName' => $type->uriName,
                         'colors' => $uniqueColors,
                     ];
                 });

@@ -26,10 +26,10 @@
             <div class="modal_menu">
                 <ul>
                     @foreach($typesWithColors as $typeWithColors)
-                        <li><a href="" >{{ $typeWithColors['type'] }}</a>
+                        <li><a href="{{route('stones.filter', ['type' => $typeWithColors['uriName']])}}" >{{ $typeWithColors['type'] }}</a>
                             <ul>
                                 @foreach($typeWithColors['colors'] as $color)
-                                    <li><a href="">{{ $color->name }}</a></li>
+                                    <li><a href="{{route('stones.filter', ['type' => $typeWithColors['uriName'], 'color' => $color->uriName])}}">{{ $color->name }}</a></li>
                                 @endforeach
                             </ul>
                         </li>

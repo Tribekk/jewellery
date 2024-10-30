@@ -51,19 +51,18 @@
         </div>
     </div>
 </footer>
-<script>
+<script async>
     $(document).ready(function () {
-        $('.menu_top ul li a').each(function () {
-            if (document.location.pathname !== '/')
-                if ($(this).attr('href').includes(document.location.pathname)) {
-                    $(this).addClass('active');
-                }
-        });
-        $('.footer_main a').each(function () {
-            if (document.location.pathname !== '/')
-                if ($(this).attr('href').includes(document.location.pathname)) {
-                    $(this).addClass('active');
-                }
+        const basePath = window.location.origin; // Получаем базовый URL, например, http://127.0.0.1:8000
+        const currentPath = document.location.pathname; // Относительный путь, например, /stone/sapfir/zelenyy
+
+        $('.menu_top ul li a, .footer_main a').each(function () {
+            const href = $(this).attr('href').replace(basePath, ''); // Убираем базовый URL из href
+
+            // Проверяем, чтобы href был началом текущего пути
+            if (currentPath.startsWith(href) && currentPath !== '/') {
+                $(this).addClass('active');
+            }
         });
     });
 </script>

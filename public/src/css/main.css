@@ -71,10 +71,10 @@ header .logo_main{
         display: block;
     }
 }
-.menu_top ul li a:hover, .footer_main a:hover{
-    text-decoration: underline;
-}
 .menu_top ul li a.active, .footer_main a.active{
+    text-decoration: underline dotted;
+}
+.menu_top ul li a:hover, .footer_main a:hover{
     text-decoration: underline;
 }
 /* footer style */
