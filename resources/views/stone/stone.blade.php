@@ -1,7 +1,7 @@
 <x-header message="Каталог камней"/>
 <link rel="stylesheet" href="{{asset('src/css/stone.css')}}">
 <main class="content container mx-auto">
-    <div class="catalog d-flex justly-spase-between wrap">
+    <div class="catalog d-flex wrap">
         @foreach($stones as $stone)
             <div class="row-4 w-100 catalog_item">
                 <img src="{{asset('storage/' . $stone->preview_photo)}}" alt="{{$stone->name}}">

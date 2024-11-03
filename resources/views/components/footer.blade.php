@@ -51,7 +51,7 @@
         </div>
     </div>
 </footer>
-<script async>
+<script>
     $(document).ready(function () {
         const basePath = window.location.origin; // Получаем базовый URL, например, http://127.0.0.1:8000
         const currentPath = document.location.pathname; // Относительный путь, например, /stone/sapfir/zelenyy

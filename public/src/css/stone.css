@@ -1,3 +1,6 @@
+.catalog{
+    padding: 10px 20px;
+}
 .catalog_item{
     padding: 10px;
     position: relative;
