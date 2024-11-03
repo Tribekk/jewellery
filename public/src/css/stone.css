@@ -23,13 +23,3 @@
         display: block;
     }
 }
-.button{
-    font-size: 18px;
-    margin: 20px auto 10px;
-    display: block;
-    width: 70%;
-    background-color: #212121;
-    padding: 5px;
-    text-align: center;
-    color: white;
-}

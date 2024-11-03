@@ -17,15 +17,27 @@ class StoneModelController extends Controller
         $query = StoneModel::whereHas('typeBelongsTo', function($query) use ($type) {
             $query->where('uriName', $type);
         });
+        $stones = $query->get();
+        if (sizeof($stones)<1)
+        {
+            $color = $type;
+            $query = StoneModel::whereHas('colorBelongsTo', function($query) use ($color) {
+                $query->where('uriName', $color);
+            });
+        }
 
-        if ($color) {
+        elseif ($color) {
             $query->whereHas('colorBelongsTo', function($query) use ($color) {
                 $query->where('uriName', $color);
             });
         }
 
         $stones = $query->get();
-
         return view('stone.stone', compact('stones', 'type', 'color'));
+    }
+
+    function show($article){
+        $item = StoneModel::where('article', '=', $article)->first();
+        return view('stone.stone_item', compact('item'));
     }
 }

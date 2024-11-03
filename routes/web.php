@@ -22,7 +22,8 @@ Route::get('/', function () {
 //Каталог камней
 Route::prefix('/stone')->group(function () {
     Route::get('/', [StoneModelController::class, 'index'])->name('stone');
-    Route::get('/{type}/{color?}', [StoneModelController::class, 'filter'])->name('stones.filter');
+    Route::get('/{type}/{color?}', [StoneModelController::class, 'filter'])->where(['type' => '[a-zA-ZА-Яа-я]+', 'color' => '[a-zA-ZА-Яа-я]+'])->name('stones.filter');
+    Route::get('/{article}', [StoneModelController::class, 'show'])->where('article', '[a-zA-Z0-9-]+')->name('stones.item');
 });
 
 //Камни и украшения

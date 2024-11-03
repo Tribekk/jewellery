@@ -1,0 +1,56 @@
+.carousel-indicators [data-bs-target] {
+    height: 100px;
+    width: 150px;
+}
+
+.carousel-indicators .active {
+    border: 1px solid white;
+}
+
+.carousel.slide {
+    width: 65%;
+}
+
+.characteristics_stone {
+    width: 35%;
+    padding: 0 20px;
+}
+
+.characteristics_stone h2 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.characteristics_stone p.price, .characteristics_stone h3 {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.characteristics_stone p:not(.price) {
+    margin-top: 10px;
+    color: grey;
+}
+
+.right_description_item li {
+    list-style-type: "- ";
+}
+
+.description_item, .right_description_item {
+    padding: 50px;
+}
+
+.right_description_item p {
+    margin-bottom: 20px;
+}
+
+.description_item h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.description_item p {
+    font-size: 20px;
+}
