@@ -30,7 +30,7 @@
         <p class="text-center price">
             Цена: {{number_format($item->price, 0, '', ' ')}} Руб.
         </p>
-        <a class="button" href="">Добавить в корзину</a>
+        <a class="button" href="{{ route('cart.add', ['article' => $item->article]) }}">Добавить в корзину</a>
         <hr>
         <h3 class="text-center">характеристики</h3>
         <p>Масса: {{$item->mass}} карат</p>

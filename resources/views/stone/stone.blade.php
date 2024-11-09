@@ -23,7 +23,7 @@
                             <a href="{{route('stones.item', ['article' => $stone['article']])}}" class="button">Подробнее</a>
                         </p>
                         <p>
-                            <a href="" class="button">В корзину</a>
+                            <a href="{{ route('cart.add', ['article' => $stone->article]) }}" class="button">В корзину</a>
                         </p>
                     </div>
                 </div>

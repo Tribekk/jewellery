@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoneModelController;
 use Illuminate\Support\Facades\Route;
@@ -68,9 +69,9 @@ Route::prefix('encyclopedia')->group(function () {
 //Корзина
 
 Route::prefix('cart')->group(function () {
-    Route::get('/', function () {
-        return view('cart.cart');
-    })->name('cart');
+    Route::get('/', [CartController::class, 'index'])->name('cart');
+    Route::get('/add/{article}', [CartController::class, 'add'])->name('cart.add');
+    Route::get('/remove/{article}', [CartController::class, 'remove'])->name('cart.remove');
 });
 
 Route::get('/dashboard', function () {
