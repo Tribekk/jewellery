@@ -22,4 +22,9 @@ class TypeStone extends Model
     {
         return $this->hasMany(StoneModel::class, 'type_index', 'uriName');
     }
+
+    public function colors(): HasMany
+    {
+        return $this->hasMany(ColorStone::class, 'uriName', 'color_index');
+    }
 }
