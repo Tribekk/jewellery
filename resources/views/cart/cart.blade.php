@@ -4,7 +4,7 @@
     <div class="cart container-lg">
         @foreach($cart as $item)
             <div class="cart_item d-flex">
-                <img src="storage/{{asset($item->preview_photo)}}" alt="" class="w-1/5">
+                <img src="storage{{asset($item->preview_photo)}}" alt="" class="w-1/5">
                 <p class="name_item w-2/5 text-center my-auto">{{$item->name}}</p>
                 <p class="price_item w-1/5 text-center my-auto">{{number_format($item->price, 0, '', ' ')}} рублей</p>
                 <a href="{{ route('cart.remove', ['article' => $item->article]) }}" class="w-1/5 text-center my-auto">X</a>
