@@ -21,5 +21,6 @@ class HeaderServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $menuData = TypeStone::with('colors')->get();
+
     }
 }

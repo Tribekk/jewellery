@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\EncyclopediaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoneModelController;
 use Illuminate\Support\Facades\Route;
@@ -61,9 +62,8 @@ Route::prefix('blog')->group(function () {
 //Энциклопедия
 
 Route::prefix('encyclopedia')->group(function () {
-    Route::get('/', function () {
-        return view('encyclopedia.encyclopedia');
-    })->name('encyclopedia');
+    Route::get('/', [EncyclopediaController::class, 'index'])->name('encyclopedia');
+    Route::get('/{page}/{dopPage?}', [EncyclopediaController::class, 'viewPage'])->name('view-page-encyclopedia');
 });
 
 //Корзина

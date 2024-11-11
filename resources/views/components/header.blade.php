@@ -43,7 +43,13 @@
         <li><a href="{{route('about')}}">О нас</a></li>
         <li><a href="{{route('blog')}}">Блог</a></li>
         <li><a href="{{route('encyclopedia')}}">Энциклопедия</a></li>
-        <li><a href="{{route('cart')}}">Корзина</a></li>
+        @if(session()->has('cart') and sizeof(session('cart'))>0)
+            <li><a href="{{ route('cart') }}">Корзина <span class="badge text-bg-secondary">
+        {{ sizeof(session('cart')) }}
+    </span></a></li>
+        @else
+            <li><a href="{{route('cart')}}">Корзина</a></li>
+        @endif
     </ul>
     </div>
 {{--    <div>--}}

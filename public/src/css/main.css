@@ -78,6 +78,14 @@ header .logo_main{
 .menu_top ul li a:hover, .footer_main a:hover{
     text-decoration: underline;
 }
+@media screen and (max-width: 1024px){
+    .menu_top ul{
+        flex-wrap: wrap;
+    }
+    .row-4.catalog_item{
+        width: 50%;
+    }
+}
 /* footer style */
 .bg-color-footer{
     background: #e0e0e0;
@@ -102,6 +110,11 @@ footer .footer-3{
     height: 63px;
     padding: 20px 0;
 }
+@media screen and (max-width: 1024px){
+    footer .footer_main{
+        padding: 0 20px;
+    }
+}
 /* group style */
 .d-flex{
     display: flex;
@@ -123,6 +136,16 @@ a:hover{
 }
 .row-4{
     width: 25%;
+}
+.catalog{
+    padding: 10px 20px;
+}
+.catalog_item{
+    padding: 10px;
+    position: relative;
+}
+.catalog_item img{
+    width: 100%;
 }
 /*Стандартная кнопка*/
 .button{

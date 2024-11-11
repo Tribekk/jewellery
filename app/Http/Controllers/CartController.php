@@ -22,7 +22,6 @@ class CartController extends Controller
         $cart[$id] = $product;
 
         session()->put('cart', $cart);
-
         return redirect()->back()->with('success', 'Товар добавлен в корзину!');
     }
 
