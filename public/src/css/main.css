@@ -4,6 +4,7 @@ header{
     margin-bottom: 50px;
 }
 header .logo_main{
+    margin: 30px 0;
     width: 100%;
     display: flex;
 }
@@ -109,6 +110,14 @@ footer .footer-3{
     background: #bdbdbd;
     height: 63px;
     padding: 20px 0;
+}
+.logo_footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.logo_footer img{
+    width: 5%;
+    margin-right: 10px;
 }
 @media screen and (max-width: 1024px){
     footer .footer_main{

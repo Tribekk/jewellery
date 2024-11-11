@@ -13,7 +13,7 @@
 <header class="container mx-auto">
     <div class="logo_main">
         <div class="logo_picture">
-            <a href="{{route('index')}}"><img src="{{asset('src/img/logo.svg')}}" alt="Логотип"></a>
+            <a href="{{route('index')}}"><img src="{{asset('src/img/logotypes/big_logo.svg')}}" alt="Логотип"></a>
         </div>
         <div class="logo_phone">
             <img src="{{asset('src/img/phone.svg')}}" alt="Номер телефона">
@@ -22,8 +22,9 @@
     </div>
     <div class="menu_top">
     <ul>
+        <li><a href="{{route('about')}}">О нас</a></li>
         <li class="modal_menu_hover">
-            <a href="{{route('stone')}}">Каталог камней</a>
+            <a href="{{route('stone')}}">Драгоценные камни</a>
             <div class="modal_menu">
                 <ul>
                     @foreach($typesWithColors as $typeWithColors)
@@ -38,11 +39,12 @@
                 </ul>
             </div>
         </li>
-        <li><a href="{{route('StonesAndDecorations')}}">Камни и украшения</a></li>
-        <li><a href="{{route('JewelryCatalog')}}">Каталог ювелирных изделий</a></li>
-        <li><a href="{{route('about')}}">О нас</a></li>
-        <li><a href="{{route('blog')}}">Блог</a></li>
-        <li><a href="{{route('encyclopedia')}}">Энциклопедия</a></li>
+        <li><a href="{{route('StonesAndDecorations')}}">Полудрагоценные камни</a></li>
+        <li><a href="{{route('JewelryCatalog')}}">Ювелирные изделия</a></li>
+        <li><a href="{{route('blog')}}">Партнёрство B2B</a></li>
+        <li><a href="{{route('encyclopedia')}}">Контакты</a></li>
+        <li><a href="{{route('encyclopedia')}}">Оплата и доставка</a></li>
+        <li><a href="{{route('encyclopedia')}}">Сертификация камней</a></li>
         @if(session()->has('cart') and sizeof(session('cart'))>0)
             <li><a href="{{ route('cart') }}">Корзина <span class="badge text-bg-secondary">
         {{ sizeof(session('cart')) }}
@@ -52,9 +54,4 @@
         @endif
     </ul>
     </div>
-{{--    <div>--}}
-{{--        @foreach($stones as $stone)--}}
-{{--            {{$stone->name}}--}}
-{{--        @endforeach--}}
-{{--    </div>--}}
 </header>

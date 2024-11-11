@@ -47,7 +47,7 @@
             <a href="">Персональные данные</a>
             <a href="" class="margin-left-20px">Карта сайта</a>
         </div>
-            <p>GEMLOVERS © 2012 - 2024</p>
+            <p class="logo_footer"><img src="{{asset('src/img/logotypes/min_logo.svg')}}" alt="">Carduus Carat © 2012 - 2024</p>
         </div>
     </div>
 </footer>
