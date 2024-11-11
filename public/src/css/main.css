@@ -3,89 +3,41 @@ header{
     width: 100%;
     margin-bottom: 50px;
 }
-header .logo_main{
-    margin: 30px 0;
+header .navbar-brand{
+    width: 85%;
+    margin: auto;
+}
+header .navbar-brand img{
+    width: 250px;
+    margin: auto;
+}
+header .bg-dark, header .text-bg-dark{
+    background-color: #183d35!important;
+}
+.offcanvas-title img{
     width: 100%;
-    display: flex;
 }
-.logo_picture{
-    width: 65%;
-    display: flex;
+.cart_href{
+    position: relative;
 }
-.logo_picture a{
-    width: 100%;
-}
-.logo_picture img{
-    width: 40%;
-    margin: 0 0 0 auto;
-}
-.logo_phone{
-    display: flex;
-    width: 35%;
-}
-.logo_phone img{
-    width: 4%;
-    margin: 0 0 0 auto;
-}
-.telephone_number{
-    line-height: 22px;
-    margin: auto 20px auto 15px;
-    vertical-align: middle;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 22px;
-    text-align: right;
-}
-.telephone_number:hover{
-    text-decoration: underline;
-}
-.menu_top{
-    display: flex;
-}
-.menu_top ul{
-    display: flex;
-    margin: 0 auto;
-}
-.menu_top ul li{
-    margin: 15px;
-}
-.modal_menu{
-    display: none;
+.badge{
     position: absolute;
-    z-index: 200;
-    width: 50vw;
-    background: white;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px;
+    top: 0;
+    right: 0;
 }
-.modal_menu ul{
-    flex-wrap: wrap;
+.partners_CarduusCarat ol{
+    list-style: auto;
+    padding-left: 2rem;
 }
-.modal_menu ul li{
-    width: 25%;
+.right_menu{
+    width: 10%;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-end;
 }
-.modal_menu ul ul{
-    display: block;
-}
-.modal_menu_hover:hover{
-    .modal_menu{
-        display: block;
-    }
-}
-.menu_top ul li a.active, .footer_main a.active{
-    text-decoration: underline dotted;
-}
-.menu_top ul li a:hover, .footer_main a:hover{
-    text-decoration: underline;
-}
-@media screen and (max-width: 1024px){
-    .menu_top ul{
-        flex-wrap: wrap;
-    }
-    .row-4.catalog_item{
-        width: 50%;
-    }
+.right_menu img{
+    width: 40px;
+    margin: 0 10px;
 }
 /* footer style */
 .bg-color-footer{

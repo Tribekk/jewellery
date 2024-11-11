@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\B2BController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\EncyclopediaController;
 use App\Http\Controllers\ProfileController;
@@ -73,7 +74,10 @@ Route::prefix('cart')->group(function () {
     Route::get('/add/{article}', [CartController::class, 'add'])->name('cart.add');
     Route::get('/remove/{article}', [CartController::class, 'remove'])->name('cart.remove');
 });
-
+// B2B
+Route::prefix('partners')->group(function (){
+   Route::get('/', [B2BController::class, 'index'])->name('B2B');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

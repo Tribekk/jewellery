@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="row-4">
-                <a class="telephone_number" href="tel:89999999999">8 999 999-99-99</a>
+                <a class="telephone_number" href="tel:+79058436464">8 905 843-64-64</a>
                 <p class="margin-top-10px">Ежедневно с 10:00 до 22:00 (МСК)</p>
             </div>
             <div class="row-4">
