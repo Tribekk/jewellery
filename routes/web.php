@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\B2BController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\EncyclopediaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoneModelController;
@@ -78,6 +79,12 @@ Route::prefix('cart')->group(function () {
 Route::prefix('partners')->group(function (){
    Route::get('/', [B2BController::class, 'index'])->name('B2B');
 });
+
+//Оплата и доставка
+Route::prefix('delivery')->group(function (){
+    Route::get('/', [DeliveryController::class, 'index'])->name('delivery');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

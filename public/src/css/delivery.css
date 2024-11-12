@@ -1,0 +1,24 @@
+.delivery h2 {
+    color: #7b3f00;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 1em;
+}
+.delivery p, ul {
+    margin: 1em 0;
+}
+.delivery ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+.delivery .highlight {
+    color: #7b3f00;
+    font-weight: bold;
+}
+.delivery a {
+    color: #337ab7;
+    text-decoration: none;
+}
+.delivery a:hover {
+    text-decoration: underline;
+}

@@ -42,7 +42,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{route('about')}}">О нас</a>
+                            <a class="nav-link" href="{{route('about')}}">О нас</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="{{route('stone')}}" role="button"
@@ -70,7 +70,7 @@
                             <a class="nav-link" href="{{route('encyclopedia')}}">Контакты</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{route('encyclopedia')}}">Оплата и доставка</a>
+                            <a class="nav-link" href="{{route('delivery')}}">Оплата и доставка</a>
                         </li>
                         <li>
                             <a class="nav-link" href="{{route('encyclopedia')}}">Сертификация камней</a>

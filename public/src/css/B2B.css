@@ -1,0 +1,31 @@
+.partners_CarduusCarat h1, h2 {
+    color: #7b3f00;
+    text-align: center;
+}
+.partners_CarduusCarat h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.partners_CarduusCarat h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    text-align: left;
+}
+.partners_CarduusCarat p, ul{
+    margin: 1em 0;
+}
+.partners_CarduusCarat ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+.partners_CarduusCarat .highlight {
+    color: #7b3f00;
+    font-weight: bold;
+}
+.partners_CarduusCarat .contact {
+    color: #7b3f00;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 1em;
+}
