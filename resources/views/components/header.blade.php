@@ -18,8 +18,12 @@
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="/"><img src="{{asset('src/img/logotypes/big_logo_black.svg')}}"
-                                                  alt="logo"></a>
+            <a class="navbar-brand" href="/">
+                <img class="desktop_logo" src="{{asset('src/img/logotypes/big_logo_black.svg')}}"
+                                                  alt="logo">
+                <img class="mobile_logo" src="{{asset('src/img/logotypes/min_logo_black.svg')}}"
+                     alt="logo">
+            </a>
             <div class="right_menu">
                 <a href="/"><img src="{{asset('src/img/logotypes/location.svg')}}" alt="Местонахождение"></a>
                 <a href="tel:+79058436464"><img src="{{asset('src/img/logotypes/phone.svg')}}" alt="Телефон"></a>
