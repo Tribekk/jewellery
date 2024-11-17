@@ -15,7 +15,7 @@
     <div class="total_price container-lg text-right">
         <p>Итого:</p>
         <p>{{number_format($totalPrice, 0, '', ' ')}} рублей</p>
-        <a class="button w-1/5 ms-auto m-0">Оформить заказ</a>
+        <a class="button w-1/5 ms-auto m-0" href="{{route('create.order')}}">Оформить заказ</a>
     </div>
 @else
     <h1 class="text-center h1 mb-5">Корзина пуста</h1>

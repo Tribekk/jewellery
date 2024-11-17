@@ -6,6 +6,7 @@ use App\Http\Controllers\CertificationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\EncyclopediaController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoneModelController;
 use Illuminate\Support\Facades\Route;
@@ -90,6 +91,12 @@ Route::prefix('contact')->group(function (){
 //Сертификация
 Route::prefix('certification')->group(function (){
     Route::get('/', [CertificationController::class, 'index'])->name('certification');
+});
+
+//Заказ
+Route::prefix('order')->group(function (){
+    Route::get('/create', [OrderController::class, 'index'])->name('create.order');
+    Route::post('/create', [OrderController::class, 'create']);
 });
 
 //Оплата и доставка

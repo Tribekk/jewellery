@@ -1,0 +1,19 @@
+form{
+    background-color: rgba(204, 204, 204, 0.6);
+    padding: 25px;
+    border-radius: 25px;
+}
+.check_block {
+    width: 300px;
+    margin: auto;
+    text-align: left;
+}
+
+.create_order * {
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+}

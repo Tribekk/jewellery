@@ -57,8 +57,10 @@
                                 @foreach($typesWithColors as $typeWithColors)
                                     <li>
                                         <a class="dropdown-item" href="{{route('stones.filter', ['type' => $typeWithColors['uriName']])}}">{{ $typeWithColors['type'] }}</a>
-                                    </li>
                                 @endforeach
+                                        <hr>
+                                        <a class="dropdown-item" href="{{route('stone')}}">Смотреть все</a>
+                                    </li>
                             </ul>
                         </li>
                         <li>
