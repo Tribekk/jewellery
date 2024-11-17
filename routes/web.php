@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\B2BController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CertificationController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\EncyclopediaController;
 use App\Http\Controllers\ProfileController;
@@ -78,6 +80,16 @@ Route::prefix('cart')->group(function () {
 // B2B
 Route::prefix('partners')->group(function (){
    Route::get('/', [B2BController::class, 'index'])->name('B2B');
+});
+
+// Контакты
+Route::prefix('contact')->group(function (){
+    Route::get('/', [ContactController::class, 'index'])->name('contact');
+});
+
+//Сертификация
+Route::prefix('certification')->group(function (){
+    Route::get('/', [CertificationController::class, 'index'])->name('certification');
 });
 
 //Оплата и доставка

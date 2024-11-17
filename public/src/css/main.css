@@ -1,3 +1,8 @@
+body{
+    background-image: url("/src/img/background.png");
+    background-position: top;
+    color: white;
+}
 /* header style*/
 header {
     width: 100%;
@@ -136,7 +141,21 @@ a:hover {
 .row-4 {
     width: 25%;
 }
-
+@media screen and (max-width: 1500px){
+    .row-4{
+        width: 33.3%;
+    }
+}
+@media screen and (max-width: 1100px){
+    .row-4{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 500px){
+    .row-4{
+        width: 100%;
+    }
+}
 .catalog {
     padding: 10px 20px;
 }

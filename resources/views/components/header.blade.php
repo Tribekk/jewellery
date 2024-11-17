@@ -71,13 +71,13 @@
                             <a class="nav-link" href="{{route('B2B')}}">Партнёрство B2B</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{route('encyclopedia')}}">Контакты</a>
+                            <a class="nav-link" href="{{route('contact')}}">Контакты</a>
                         </li>
                         <li>
                             <a class="nav-link" href="{{route('delivery')}}">Оплата и доставка</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{route('encyclopedia')}}">Сертификация камней</a>
+                            <a class="nav-link" href="{{route('certification')}}">Сертификация камней</a>
                         </li>
                     </ul>
                 </div>
