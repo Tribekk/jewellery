@@ -151,7 +151,12 @@
             if (aspectRatio < 0.8) {
                 document.querySelector('.about > img').setAttribute('src', '{{asset('src/img/main_banners/about_mobile.png')}}');
                 document.querySelector('.stone > img').setAttribute('src', '{{asset('src/img/main_banners/stone_mobile.png')}}');
+                document.querySelector('.decorations > img').setAttribute('src', '{{asset('src/img/main_banners/decorations_mobile.png')}}');
+                document.querySelector('.JewelryCatalog > img').setAttribute('src', '{{asset('src/img/main_banners/JewelryCatalog_mobile.png')}}');
+                document.querySelector('.B2B > img').setAttribute('src', '{{asset('src/img/main_banners/B2B_mobile.png')}}');
                 document.querySelector('.contact > img').setAttribute('src', '{{asset('src/img/main_banners/contacts_mobile.png')}}');
+                document.querySelector('.delivery > img').setAttribute('src', '{{asset('src/img/main_banners/delivery_mobile.png')}}');
+                document.querySelector('.certification > img').setAttribute('src', '{{asset('src/img/main_banners/certification_mobile.png')}}');
             } else {
                 document.querySelector('.about > img').setAttribute('src', '{{asset('src/img/main_banners/about.png')}}');
                 document.querySelector('.stone > img').setAttribute('src', '{{asset('src/img/main_banners/stone.png')}}');

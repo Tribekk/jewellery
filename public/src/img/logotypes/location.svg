@@ -1,7 +1,4 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
-</svg>
+<svg width="21" height="30" viewBox="0 0 21 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.73 15.5699C8.16 15.5699 6.07001 13.4799 6.07001 10.9099C6.07001 8.33994 8.16 6.24994 10.73 6.24994C13.3 6.24994 15.39 8.33994 15.39 10.9099C15.39 13.4799 13.3 15.5699 10.73 15.5699ZM10.73 8.10994C9.19 8.10994 7.92999 9.36994 7.92999 10.9099C7.92999 12.4499 9.18 13.7099 10.73 13.7099C12.28 13.7099 13.53 12.4499 13.53 10.9099C13.53 9.36994 12.27 8.10994 10.73 8.10994Z" fill="white"/>
+<path d="M10.73 29.39L9.95 28.21C9.9 28.13 4.47999 19.93 2.50999 17.03C1.15999 15.04 0.470001 12.98 0.470001 10.91C0.470001 5.24996 5.07 0.649963 10.73 0.649963C16.39 0.649963 20.99 5.24996 20.99 10.91C20.99 12.98 20.3 15.04 18.95 17.03C16.97 19.93 11.56 28.13 11.51 28.21L10.73 29.39ZM10.73 2.50996C6.1 2.50996 2.34 6.27996 2.34 10.9C2.34 12.59 2.92 14.3 4.06 15.97C5.59 18.21 9.16001 23.6 10.74 26C12.32 23.61 15.89 18.22 17.42 15.97C18.56 14.3 19.14 12.59 19.14 10.9C19.14 6.26996 15.37 2.50996 10.74 2.50996H10.73Z" fill="white"/>
+</svg>

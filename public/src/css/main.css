@@ -82,6 +82,7 @@ header .bg-dark, header .text-bg-dark {
 
 .right_menu img {
     width: 40px;
+    height: 40px;
     max-width: 40px;
 }
 .mobile_logo{
