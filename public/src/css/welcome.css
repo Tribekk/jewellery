@@ -1,0 +1,114 @@
+header {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.banner {
+    display: none;
+}
+
+.banner.active {
+    display: block;
+}
+
+.scroll_arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: white;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.main_banners {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("/src/img/main_banners/about.png");
+    background-size: cover;
+}
+
+.main_banners .banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main_banners img {
+    display: block;
+    height: 100%;
+    margin: auto;
+}
+
+.banner .text_banner h3 {
+    font-size: 47px;
+    line-height: 50px;
+    font-weight: 400;
+}
+
+.banner .text_banner h4 {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 31px;
+}
+
+.banner .text_banner a {
+    padding: 14px 23px;
+    border: 1px solid #B1824C;
+    box-shadow: -5.23px 10px 20px 0 #2355D780;
+    border-radius: 23px;
+    margin-top: 31px;
+    font-size: 15px;
+    line-height: 18px;
+    display: block;
+    width: max-content;
+}
+@media (orientation: portrait) {
+    .banner .text_banner {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        width: 60%;
+        transform: translateX(-50%);
+        color: white;
+    }
+}
+@media (orientation: landscape) {
+    .banner .text_banner {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        width: 25%;
+        color: white;
+    }
+}
+@media screen and (max-width: 1000px){
+    .banner .text_banner h3 {
+        font-size: 27px;
+        line-height: 29px;
+    }
+    .banner .text_banner h4 {
+        font-size: 14px;
+        line-height: 10px;
+        font-weight: 400;
+        margin-top: 18px;
+    }
+    .banner .text_banner a {
+        padding: 8px 13px;
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 10px;
+    }
+}
