@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="stone banner">
-        <img src="{{asset('src/img/main_banners/stone.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/stone.png')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Драгоценности, которые рассказывают вашу историю!</h3>
             <h4>Выберите идеальный камень из нашего ассортимента шпинели, сапфиров, изумрудов и рубинов.</h4>
