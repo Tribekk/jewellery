@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="decorations banner">
-        <img src="{{asset('src/img/main_banners/decorations.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/decorations.png')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Натуральная красота, доступная каждому!</h3>
             <h4>Нефрит, лазурит, топазы и многое другое в уникальном исполнении.</h4>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="JewelryCatalog banner">
-        <img src="{{asset('src/img/main_banners/JewelryCatalog.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/JewelryCatalog.png')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Украшения, созданные для вас!</h3>
             <h4>Кольца, браслеты, серьги и кулоны, которые подчеркнут вашу индивидуальность.</h4>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="B2B banner">
-        <img src="{{asset('src/img/main_banners/B2B.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/B2B.png')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Ваш успех — наша миссия!</h3>
             <h4>Индивидуальные условия, гарантии качества и гибкие скидки для бизнеса.</h4>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="contact banner">
-        <img src="{{asset('src/img/main_banners/contacts.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/contacts.png')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Мы всегда на связи!</h3>
             <h4>Свяжитесь с нами для консультации, вопросов и оформления заказов.</h4>
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="delivery banner">
-        <img src="{{asset('src/img/main_banners/delivery.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/delivery.png')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Удобные способы оплаты и доставка в любую точку России!</h3>
             <h4>Мы позаботимся о том, чтобы ваш заказ дошел быстро и безопасно.</h4>
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="certification banner">
-        <img src="{{asset('src/img/main_banners/certification.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/certification.png')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Качество, подтверждённое экспертами!</h3>
             <h4>Все наши камни проходят строгую сертификацию в соответствии с мировыми стандартами.</h4>
