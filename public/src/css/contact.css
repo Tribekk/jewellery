@@ -2,7 +2,7 @@ h1, h2 {
     color: #007BFF;
 }
 .details, .intro, .info-block {
-    background: #f9f9f9;
+    background: #f9f9f93d;
     border-left: 4px solid #007BFF;
     padding: 15px;
     margin: 15px 0;
@@ -36,11 +36,4 @@ h1, h2 {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
-}
-.footer {
-    margin-top: 40px;
-    padding: 15px;
-    background: #007BFF;
-    color: #fff;
-    text-align: center;
 }

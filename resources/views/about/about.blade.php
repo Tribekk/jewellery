@@ -1,6 +1,6 @@
 <x-header message="О нас"/>
 <link rel="stylesheet" href="{{asset('src/css/about.css')}}">
-<section class="about">
+<section class="about black_background">
     <div class="container-lg">
         <h1>История ювелирной компании Carduus Carat</h1>
 

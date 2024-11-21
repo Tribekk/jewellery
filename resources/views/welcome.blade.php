@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{asset('src/css/welcome.css')}}">
 <section class="main_banners">
     <div class="about banner">
-        <img src="{{asset('src/img/main_banners/about.png')}}" alt="">
+        <img src="{{asset('src/img/main_banners/about.webp')}}" alt="">
         <div class="text_banner">
             <h3>Carduus Carat — традиции, искусство, совершенство!</h3>
             <h4>Узнайте нашу историю и философию создания ювелирных шедевров.</h4>
@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="stone banner">
-        <img src="{{asset('src/img/main_banners/stone.png')}}" alt="" loading="lazy">
+        <img src="{{asset('src/img/main_banners/stone.webp')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Драгоценности, которые рассказывают вашу историю!</h3>
             <h4>Выберите идеальный камень из нашего ассортимента шпинели, сапфиров, изумрудов и рубинов.</h4>
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="decorations banner">
-        <img src="{{asset('src/img/main_banners/decorations.png')}}" alt="" loading="lazy">
+        <img src="{{asset('src/img/main_banners/decorations.webp')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Натуральная красота, доступная каждому!</h3>
             <h4>Нефрит, лазурит, топазы и многое другое в уникальном исполнении.</h4>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="JewelryCatalog banner">
-        <img src="{{asset('src/img/main_banners/JewelryCatalog.png')}}" alt="" loading="lazy">
+        <img src="{{asset('src/img/main_banners/JewelryCatalog.webp')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Украшения, созданные для вас!</h3>
             <h4>Кольца, браслеты, серьги и кулоны, которые подчеркнут вашу индивидуальность.</h4>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="B2B banner">
-        <img src="{{asset('src/img/main_banners/B2B.png')}}" alt="" loading="lazy">
+        <img src="{{asset('src/img/main_banners/B2B.webp')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Ваш успех — наша миссия!</h3>
             <h4>Индивидуальные условия, гарантии качества и гибкие скидки для бизнеса.</h4>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="contact banner">
-        <img src="{{asset('src/img/main_banners/contacts.png')}}" alt="" loading="lazy">
+        <img src="{{asset('src/img/main_banners/contacts.webp')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Мы всегда на связи!</h3>
             <h4>Свяжитесь с нами для консультации, вопросов и оформления заказов.</h4>
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="delivery banner">
-        <img src="{{asset('src/img/main_banners/delivery.png')}}" alt="" loading="lazy">
+        <img src="{{asset('src/img/main_banners/delivery.webp')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Удобные способы оплаты и доставка в любую точку России!</h3>
             <h4>Мы позаботимся о том, чтобы ваш заказ дошел быстро и безопасно.</h4>
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="certification banner">
-        <img src="{{asset('src/img/main_banners/certification.png')}}" alt="" loading="lazy">
+        <img src="{{asset('src/img/main_banners/certification.webp')}}" alt="" loading="lazy">
         <div class="text_banner">
             <h3>Качество, подтверждённое экспертами!</h3>
             <h4>Все наши камни проходят строгую сертификацию в соответствии с мировыми стандартами.</h4>
@@ -149,23 +149,23 @@
             const activeBanner = document.querySelector('.banner.active');
             mainBanners.style.backgroundImage = `url("${activeBanner.children[0].getAttribute('src')}")`;
             if (aspectRatio < 0.8) {
-                document.querySelector('.about > img').setAttribute('src', '{{asset('src/img/main_banners/about_mobile.png')}}');
-                document.querySelector('.stone > img').setAttribute('src', '{{asset('src/img/main_banners/stone_mobile.png')}}');
-                document.querySelector('.decorations > img').setAttribute('src', '{{asset('src/img/main_banners/decorations_mobile.png')}}');
-                document.querySelector('.JewelryCatalog > img').setAttribute('src', '{{asset('src/img/main_banners/JewelryCatalog_mobile.png')}}');
-                document.querySelector('.B2B > img').setAttribute('src', '{{asset('src/img/main_banners/B2B_mobile.png')}}');
-                document.querySelector('.contact > img').setAttribute('src', '{{asset('src/img/main_banners/contacts_mobile.png')}}');
-                document.querySelector('.delivery > img').setAttribute('src', '{{asset('src/img/main_banners/delivery_mobile.png')}}');
-                document.querySelector('.certification > img').setAttribute('src', '{{asset('src/img/main_banners/certification_mobile.png')}}');
+                document.querySelector('.about > img').setAttribute('src', '{{asset('src/img/main_banners/about_mobile.webp')}}');
+                document.querySelector('.stone > img').setAttribute('src', '{{asset('src/img/main_banners/stone_mobile.webp')}}');
+                document.querySelector('.decorations > img').setAttribute('src', '{{asset('src/img/main_banners/decorations_mobile.webp')}}');
+                document.querySelector('.JewelryCatalog > img').setAttribute('src', '{{asset('src/img/main_banners/JewelryCatalog_mobile.webp')}}');
+                document.querySelector('.B2B > img').setAttribute('src', '{{asset('src/img/main_banners/B2B_mobile.webp')}}');
+                document.querySelector('.contact > img').setAttribute('src', '{{asset('src/img/main_banners/contacts_mobile.webp')}}');
+                document.querySelector('.delivery > img').setAttribute('src', '{{asset('src/img/main_banners/delivery_mobile.webp')}}');
+                document.querySelector('.certification > img').setAttribute('src', '{{asset('src/img/main_banners/certification_mobile.webp')}}');
             } else {
-                document.querySelector('.about > img').setAttribute('src', '{{asset('src/img/main_banners/about.png')}}');
-                document.querySelector('.stone > img').setAttribute('src', '{{asset('src/img/main_banners/stone.png')}}');
-                document.querySelector('.decorations > img').setAttribute('src', '{{asset('src/img/main_banners/decorations.png')}}');
-                document.querySelector('.JewelryCatalog > img').setAttribute('src', '{{asset('src/img/main_banners/JewelryCatalog.png')}}');
-                document.querySelector('.B2B > img').setAttribute('src', '{{asset('src/img/main_banners/B2B.png')}}');
-                document.querySelector('.contact > img').setAttribute('src', '{{asset('src/img/main_banners/contacts.png')}}');
-                document.querySelector('.delivery > img').setAttribute('src', '{{asset('src/img/main_banners/delivery.png')}}');
-                document.querySelector('.certification > img').setAttribute('src', '{{asset('src/img/main_banners/certification.png')}}');
+                document.querySelector('.about > img').setAttribute('src', '{{asset('src/img/main_banners/about.webp')}}');
+                document.querySelector('.stone > img').setAttribute('src', '{{asset('src/img/main_banners/stone.webp')}}');
+                document.querySelector('.decorations > img').setAttribute('src', '{{asset('src/img/main_banners/decorations.webp')}}');
+                document.querySelector('.JewelryCatalog > img').setAttribute('src', '{{asset('src/img/main_banners/JewelryCatalog.webp')}}');
+                document.querySelector('.B2B > img').setAttribute('src', '{{asset('src/img/main_banners/B2B.webp')}}');
+                document.querySelector('.contact > img').setAttribute('src', '{{asset('src/img/main_banners/contacts.webp')}}');
+                document.querySelector('.delivery > img').setAttribute('src', '{{asset('src/img/main_banners/delivery.webp')}}');
+                document.querySelector('.certification > img').setAttribute('src', '{{asset('src/img/main_banners/certification.webp')}}');
             }
         };
 

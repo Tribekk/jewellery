@@ -1,6 +1,6 @@
 <x-header message="Контакты" />
 <link rel="stylesheet" href="{{asset('src/css/contact.css')}}">
-    <section class="contacts">
+    <section class="contacts black_background">
         <div class="container-lg">
             <h1>Контакты</h1>
             <div class="intro">
@@ -41,36 +41,36 @@
                 <div class="bank-details">
                     <table>
                         <tr>
-                            <th>ИНН</th>
-                            <td>5612171611</td>
+                            <th><p>ИНН</p></th>
+                            <td><p>5612171611</p></td>
                         </tr>
                         <tr>
-                            <th>КПП</th>
-                            <td>561201001</td>
+                            <th><p>КПП</p></th>
+                            <td><p>561201001</p></td>
                         </tr>
                         <tr>
-                            <th>ОГРН</th>
-                            <td>1185658016356</td>
+                            <th><p>ОГРН</p></th>
+                            <td><p>1185658016356</p></td>
                         </tr>
                         <tr>
-                            <th>БИК</th>
-                            <td>042202824</td>
+                            <th><p>БИК</p></th>
+                            <td><p>042202824</p></td>
                         </tr>
                         <tr>
-                            <th>Р/c</th>
-                            <td>40702810229250005524</td>
+                            <th><p>Р/c</p></th>
+                            <td><p>40702810229250005524</p></td>
                         </tr>
                         <tr>
-                            <th>К/c</th>
-                            <td>30101810200000000824</td>
+                            <th><p>К/c</p></th>
+                            <td><p>30101810200000000824</p></td>
                         </tr>
                         <tr>
-                            <th>Банк</th>
-                            <td>ФИЛИАЛ "НИЖЕГОРОДСКИЙ" АО "АЛЬФА-БАНК", г. Нижний Новгород</td>
+                            <th><p>Банк</p></th>
+                            <td><p>ФИЛИАЛ "НИЖЕГОРОДСКИЙ" АО "АЛЬФА-БАНК", г. Нижний Новгород</p></td>
                         </tr>
                         <tr>
-                            <th>Адрес банка</th>
-                            <td>г. Оренбург, ул. Маршала Жукова, 26</td>
+                            <th><p>Адрес банка</p></th>
+                            <td><p>г. Оренбург, ул. Маршала Жукова, 2</p>6</td>
                         </tr>
                     </table>
                 </div>
@@ -81,10 +81,6 @@
                 <p>Для вашего удобства вы можете воспользоваться интерактивной картой, чтобы найти наш офис:</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.123456!2d55.123456!3d51.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x0000000000000000!2z0KHQvtC70L7QstC90YvQuSDRgdC40LvQvtCz0L4!5e0!3m2!1sru!2sru!4v1234567890123" loading="lazy"></iframe>
             </div>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2024 ООО "ТАНТАЛ ГРУПП". Все права защищены. Свяжитесь с нами для сотрудничества или консультации!</p>
         </div>
     </section>
 <x-footer />

@@ -1,6 +1,5 @@
 .about h1, h2 {
     text-align: center;
-    color: #7b3f00;
 }
 .about h1 {
     font-size: 2.2em;
@@ -9,18 +8,15 @@
 .about h2 {
     font-size: 1.8em;
     margin: 1em 0;
-    color: #333;
 }
 .about p {
     text-align: justify;
     margin: 1em 0;
 }
 .about .highlight {
-    color: #7b3f00;
     font-weight: bold;
 }
 .about .divider {
     margin: 2em 0;
     height: 1px;
-    background-color: #ccc;
 }

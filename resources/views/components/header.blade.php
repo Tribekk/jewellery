@@ -35,7 +35,7 @@
                     <a href="{{route('cart')}}"><img src="{{asset('src/img/logotypes/cart.svg')}}" alt="Корзина"></a>
                 @endif
             </div>
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            <div class="offcanvas offcanvas-start text-bg-dark black_background" tabindex="-1" id="offcanvasDarkNavbar"
                  aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img

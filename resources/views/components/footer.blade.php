@@ -1,55 +1,35 @@
-<footer class="">
-{{--    <div class="footer_main container mx-auto">--}}
-{{--        <div class="row-4">--}}
-{{--            <h3>ВЫБРАТЬ</h3>--}}
-{{--            <p><a href="{{route('stone')}}">Каталог камней</a></p>--}}
-{{--            <p><a href="{{route('JewelryCatalog')}}">Каталог изделий</a></p>--}}
-{{--            <p><a href="{{route('StonesAndDecorations')}}">Уникальные камни</a></p>--}}
-{{--            <p><a href="{{route('JewelryCatalog')}}">Украшения на заказ</a></p>--}}
-{{--        </div>--}}
-{{--        <div class="row-4">--}}
-{{--            <h3>БУДЬТЕ В КУРСЕ</h3>--}}
-{{--            <p><a href="{{route('encyclopedia')}}">Энциклопедия</a></p>--}}
-{{--            <p><a href="{{route('blog')}}">Блог</a></p>--}}
-{{--            <p><a href="{{route('StonesAndDecorations')}}">Новости</a></p>--}}
-{{--        </div>--}}
-{{--        <div class="row-4">--}}
-{{--            <h3>КОМПАНИЯ</h3>--}}
-{{--            <p><a href="{{route('stone')}}">Наши Преимущества</a></p>--}}
-{{--            <p><a href="{{route('JewelryCatalog')}}">Оплата, доставка и возврат</a></p>--}}
-{{--            <p><a href="{{route('StonesAndDecorations')}}">Наши гарантии</a></p>--}}
-{{--            <p><a href="{{route('about')}}">О компании</a></p>--}}
-{{--            <p><a href="{{route('JewelryCatalog')}}">Контакты</a></p>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <div class="footer-2">--}}
-{{--        <div class="container mx-auto d-flex justly-spase-between text-center">--}}
-{{--            <div class="row-4">--}}
-{{--                <p><b>ИП</b> Ахметзянов Ильдар Рушанович</p>--}}
-{{--                <div class="d-flex margin-top-10px">--}}
-{{--                    <p><b>ОГРНИП</b> 317774600371172</p>--}}
-{{--                    <p class="margin-left-20px"><b>ИНН</b> 773365228980</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="row-4">--}}
-{{--                <a class="telephone_number" href="tel:+79058436464">8 905 843-64-64</a>--}}
-{{--                <p class="margin-top-10px">Ежедневно с 10:00 до 22:00 (МСК)</p>--}}
-{{--            </div>--}}
-{{--            <div class="row-4">--}}
-{{--                <p>Адрес: г. Оренбург, ул. Просторная, д. 3</p>--}}
-{{--                <p class="margin-top-10px">Открыты в будние дни с 10:00 до 20:00 (МСК)</p>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <div class="footer-3">--}}
-{{--        <div class="container mx-auto d-flex justly-spase-between text-center">--}}
-{{--        <div class="d-flex">--}}
-{{--            <a href="">Персональные данные</a>--}}
-{{--            <a href="" class="margin-left-20px">Карта сайта</a>--}}
-{{--        </div>--}}
-{{--            <p class="logo_footer"><img src="{{asset('src/img/logotypes/min_logo.svg')}}" alt="">Carduus Carat © 2012 - 2024</p>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+<footer class="site-footer black_background">
+    <div class="footer-logo">
+        <img src="{{asset('src/img/logotypes/big_logo_black.svg')}}" alt="Carduus Carat Logo">
+    </div>
+    <div class="footer-container">
+        <div class="footer-links">
+            <h5>БУДЬТЕ В КУРСЕ</h5>
+            <ul>
+                <li><p><a href="{{route('encyclopedia')}}">Энциклопедия</a></p></li>
+                <li><p><a href="{{route('blog')}}">Блог</a></p></li>
+                <li><p><a href="{{route('StonesAndDecorations')}}">Новости</a></p></li>
+                <li><p><a href="{{route('about')}}">О компании</a></p></li>
+                <li><p><a href="{{route('contact')}}">Контакты</a></p></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h5>МЫ В СОЦСЕТЯХ</h5>
+            <ul>
+                <li><a href="https://vk.com/club228334857" target="_blank" class="social-icon instagram">ВКонтакте</a></li>
+                <li><a href="https://t.me/carduuscarat" target="_blank"  class="social-icon facebook">Telegram</a></li>
+                <li><a href="#" target="_blank"  class="social-icon twitter">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h5>СВЯЗЬ</h5>
+            <p>Телефон: <a href="tel:+79058436464">+7 (905) 843-64-64</a></p>
+            <p>Email: <a href="mailto:info@carduuscarat.ru">info@carduuscarat.ru</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Carduus Carat. Все права защищены.</p>
+    </div>
 </footer>
 <script async>
     $(document).ready(function () {

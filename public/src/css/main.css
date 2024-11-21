@@ -29,11 +29,15 @@
     font-style: normal;
 }
 body{
-    background-image: url("/src/img/background.png");
     background-position: top;
     color: white;
     font-family: 'CormorantSC', Georgia, serif !important;
     line-height: 1.6;
+    background:
+        linear-gradient(rgba(22, 61, 52, .9), rgba(22, 61, 52, .9)), /* Полупрозрачный цвет */
+        url('/src/img/background.png'); /* Ваше изображение */
+    background-size: contain; /* Растягиваем изображение */
+    background-position: center;
 }
 /* header style*/
 header {
@@ -101,49 +105,83 @@ header .bg-dark, header .text-bg-dark {
     }
 }
 
-/* footer style */
-.bg-color-footer {
-    background: #e0e0e0;
-    padding-top: 36px;
+/* Основные стили футера */
+.site-footer {
+    background-color: #163d34; /* Темный фон */
+    color: #ffffff; /* Белый цвет текста */
+    padding: 40px 0 0;
+    font-family: Arial, sans-serif;
 }
 
-footer .footer_main {
+.footer-container {
     display: flex;
-    padding: 0 322px;
     justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.footer_main h3 {
-    font-size: 23px;
-    font-weight: bold;
+.footer-logo img {
+    max-width: 200px;
+    margin: 0 auto 40px;
+}
+
+.footer-links, .footer-social, .footer-contact {
+    flex: 1;
+    min-width: 200px;
     margin-bottom: 20px;
 }
 
-footer .footer-2 {
-    border-top: 1px solid #bdbdbd;
-    padding-top: 36px;
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
 }
 
-footer .footer-3 {
-    background: #bdbdbd;
-    height: 63px;
-    padding: 20px 0;
+.footer-links a,
+.footer-social a {
+    color: #7a6a44; /* Цвет ссылок */
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    font-size: 16px;
 }
 
-.logo_footer {
-    display: flex;
-    justify-content: flex-end;
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #ffffff; /* Изменение цвета при наведении */
 }
 
-.logo_footer img {
-    width: 5%;
+.footer-social .social-icon {
+    display: inline-block;
     margin-right: 10px;
+    font-size: 18px;
 }
 
-@media screen and (max-width: 1024px) {
-    footer .footer_main {
-        padding: 0 20px;
-    }
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #7a6a44;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #ffffff;
+}
+
+/* Стили для нижней части футера */
+.footer-bottom {
+    background-color: #122b25; /* Темный оттенок для нижней части */
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
 }
 
 /* group style */
@@ -174,6 +212,60 @@ a:hover {
 .row-4 {
     width: 25%;
 }
+h1 {
+    color: #ffcc00!important;
+    font-family: 'CormorantSC-Bold', serif;
+}
+
+h2 {
+    color: #f4e1c1!important;
+    font-family: 'CormorantSC-SemiBold', serif;
+}
+
+h3 {
+    color: #a7c6ed!important;
+    font-family: 'CormorantSC-Medium', serif;
+}
+
+h4 {
+    color: #b8a6d1!important;
+    font-family: 'CormorantSC-Regular', serif;
+}
+
+h5 {
+    color: #b1b881!important;
+}
+
+h6 {
+    color: #dcdcdc!important;
+}
+
+p, li {
+    color: #dcdcdc!important;
+    line-height: 1.6;
+}
+
+a {
+    color: #a7c6ed!important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffcc00!important;
+}
+
+span.highlight {
+    color: #a98128 !important;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'SansSerif', serif;
+}
+
+span.white-highlight {
+    color: #ffffff!important;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1500px){
     .row-4{
         width: 33.3%;
