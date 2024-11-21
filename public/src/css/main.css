@@ -222,12 +222,12 @@ h2 {
     font-family: 'CormorantSC-SemiBold', serif;
 }
 
-h3 {
+h3:not(.main_banners h3) {
     color: #a7c6ed!important;
     font-family: 'CormorantSC-Medium', serif;
 }
 
-h4 {
+h4:not(.main_banners h4) {
     color: #b8a6d1!important;
     font-family: 'CormorantSC-Regular', serif;
 }
@@ -245,7 +245,7 @@ p, li {
     line-height: 1.6;
 }
 
-a {
+a:not(.main_banners a) {
     color: #a7c6ed!important;
     text-decoration: none;
 }

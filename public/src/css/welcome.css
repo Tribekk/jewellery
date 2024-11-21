@@ -3,6 +3,9 @@ header {
     top: 0;
     z-index: 10;
 }
+footer{
+    display: none;
+}
 
 .banner {
     display: none;
