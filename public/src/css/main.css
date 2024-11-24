@@ -212,57 +212,79 @@ a:hover {
 .row-4 {
     width: 25%;
 }
-h1 {
-    color: #ffcc00!important;
+section h1 {
+    color: #ffcc00;
     font-family: 'CormorantSC-Bold', serif;
+    font-size: 44px;
 }
 
-h2 {
-    color: #f4e1c1!important;
+section h2 {
+    color: #f4e1c1;
     font-family: 'CormorantSC-SemiBold', serif;
+    font-size: 40px;
 }
 
 h3:not(.main_banners h3) {
-    color: #a7c6ed!important;
+    color: #a7c6ed;
     font-family: 'CormorantSC-Medium', serif;
 }
 
 h4:not(.main_banners h4) {
-    color: #b8a6d1!important;
+    color: #b8a6d1;
     font-family: 'CormorantSC-Regular', serif;
 }
 
 h5 {
-    color: #b1b881!important;
+    color: #b1b881;
 }
 
 h6 {
-    color: #dcdcdc!important;
+    color: #dcdcdc;
 }
 
 p, li {
-    color: #dcdcdc!important;
+    color: #dcdcdc;
     line-height: 1.6;
 }
 
 a:not(.main_banners a) {
-    color: #a7c6ed!important;
+    color: #a7c6ed;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ffcc00!important;
+    color: #ffcc00;
 }
 
 span.highlight {
-    color: #a98128 !important;
+    color: #a98128;
     font-size: 22px;
     font-weight: bold;
     font-family: 'SansSerif', serif;
 }
+/* Стили для заголовков */
+section .black h1, section .black  h2, section .black  h3, section .black  h4, section .black  h5, section .black  h6 {
+    color: #163d34; /* Цвет заголовков - темно-зеленый */
+    font-weight: bold;
+}
 
+/* Стили для основного текста */
+section .black  p, section .black  li, section .black  span, section .black  a {
+    color: #333333; /* Основной текст темного цвета */
+    font-size: 16px;
+}
+
+/* Ссылки */
+section .black a {
+    color: #163d34; /* Цвет ссылок - темно-зеленый */
+    text-decoration: none;
+}
+
+section .black a:hover {
+    color: #b1824c; /* Цвет ссылок при наведении - золотистый */
+}
 span.white-highlight {
-    color: #ffffff!important;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -303,5 +325,5 @@ span.white-highlight {
     background-color: #212121;
     padding: 5px;
     text-align: center;
-    color: white;
+    color: white!important;
 }

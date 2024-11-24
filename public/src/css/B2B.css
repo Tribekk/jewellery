@@ -1,5 +1,4 @@
 .partners_CarduusCarat h1, h2 {
-    color: #7b3f00;
     text-align: center;
 }
 .partners_CarduusCarat h1 {
@@ -19,11 +18,9 @@
     list-style-type: disc;
 }
 .partners_CarduusCarat .highlight {
-    color: #7b3f00;
     font-weight: bold;
 }
 .partners_CarduusCarat .contact {
-    color: #7b3f00;
     font-weight: bold;
     font-size: 1.1em;
     display: inline-block;

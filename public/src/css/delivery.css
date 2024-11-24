@@ -1,5 +1,4 @@
 .delivery h2 {
-    color: #7b3f00;
     font-size: 1.8em;
     text-align: center;
     margin-top: 1em;
@@ -12,7 +11,6 @@
     list-style-type: disc;
 }
 .delivery .highlight {
-    color: #7b3f00;
     font-weight: bold;
 }
 .delivery a {

@@ -1,3 +1,7 @@
+.stone_item_flex{
+    display: flex;
+    flex-wrap: nowrap;
+}
 .carousel-indicators [data-bs-target] {
     height: 100px;
     width: 150px;
@@ -30,7 +34,6 @@
 
 .characteristics_stone p:not(.price) {
     margin-top: 10px;
-    color: grey;
 }
 
 .right_description_item li {
@@ -53,4 +56,15 @@
 
 .description_item p {
     font-size: 20px;
+}
+@media screen and (max-width: 991px){
+    .stone_item_flex{
+        flex-wrap: wrap;
+    }
+    .carousel.slide{
+        width: 100%;
+    }
+    .characteristics_stone{
+        width: 100%;
+    }
 }
