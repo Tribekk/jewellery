@@ -17,7 +17,8 @@ return new class extends Migration
             $table->foreign('type_stone')->references('uriName')->on('type_stones')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('picture');
             $table->string('name');
-            $table->text('data');
+            $table->text('dataDesktop');
+            $table->text('dataMobile');
             $table->timestamps();
         });
     }

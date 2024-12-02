@@ -13,7 +13,8 @@ class Encyclopedia extends Model
         'type_stone',
         'picture',
         'name',
-        'data',
+        'dataDesktop',
+        'dataMobile',
     ];
 
     public function typeStones() :HasMany{

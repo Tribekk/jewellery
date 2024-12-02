@@ -13,6 +13,7 @@ class EncyclopediaPage extends Model
         'id_encyclopedia',
         'name',
         'uriName',
-        'data',
+        'dataDesktop',
+        'dataMobile',
     ];
 }

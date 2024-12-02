@@ -33,7 +33,11 @@ class EncyclopediaPageResource extends Resource
                 Forms\Components\TextInput::make('uriName')
                     ->required()
                     ->maxLength(255),
-                TinyEditor::make('data')
+                TinyEditor::make('dataDesktop')
+                    ->required()
+                    ->maxLength(65535)
+                    ->columnSpanFull(),
+                TinyEditor::make('dataMobile')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),

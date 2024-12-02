@@ -12,7 +12,7 @@ class EncyclopediaController extends Controller
         $encyclopedias = Encyclopedia::all();
         return view('encyclopedia.encyclopedia', compact('encyclopedias'));
     }
-    public function viewPage($page, $dopPage){
+    public function viewPage($page, $dopPage = null){
         $encyclopediaPage = Encyclopedia::where('type_stone', '=', $page)->firstOrFail();
         if (isset($dopPage)){
             $encyclopediaPage = EncyclopediaPage::where('uriName', '=', $dopPage)->firstOrFail();

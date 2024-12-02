@@ -17,7 +17,8 @@ return new class extends Migration
             $table->foreign('id_encyclopedia')->references('id')->on('encyclopedias')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('name');
             $table->string('uriName')->unique();
-            $table->text('data');
+            $table->text('dataDesktop');
+            $table->text('dataMobile');
             $table->timestamps();
         });
     }

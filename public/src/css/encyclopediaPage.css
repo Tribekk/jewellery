@@ -1,0 +1,16 @@
+section.encyclopedia *{
+    background-color: rgba(0, 0, 0, 0)!important;
+    color: white!important;
+}
+section.encyclopedia .contentMobile{
+    display: none;
+}
+@media screen and (max-width: 991px){
+    section.encyclopedia .contentDesktop{
+        display: none;
+    }
+    section.encyclopedia .contentMobile{
+        display: block;
+        width: 100%;
+    }
+}
