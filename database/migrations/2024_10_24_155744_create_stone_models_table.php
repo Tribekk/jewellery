@@ -20,15 +20,14 @@ return new class extends Migration
             $table->string('purity'); // чистота
             $table->string('ennoblement'); // Облагораживание (например: термообработка)
             $table->string('cut'); // Огранка
-            $table->float('height'); // |             высота
+            $table->float('height'); // |.............высота
             $table->float('width'); //  |---> размеры ширина
-            $table->float('length'); // |             длинна
+            $table->float('length'); // |.............длинна
             $table->text('birth'); // Происхождение
             $table->integer('price'); // Цена
             $table->boolean('visible')->default(true); // Признак видимости товара
             $table->string('article')->unique(); // Артикул
-            $table->string('preview_photo'); // Главное фото
-            $table->string('next_photo'); // Следующее фото todo возможно переделаю под массив фоток
+            $table->json('media'); // фото и видео
             $table->string('color_index');
             $table->string('type_index');
             $table->timestamps();

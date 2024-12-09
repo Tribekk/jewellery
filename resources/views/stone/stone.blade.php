@@ -4,13 +4,27 @@
     <div class="catalog d-flex wrap">
         @foreach($stones as $stone)
             <div class="row-4 catalog_item">
-                <img src="{{asset('storage/' . $stone->preview_photo)}}" alt="{{$stone->name}}">
+                @if(str_ends_with(strtolower($stone->media[0]), '.mp4'))
+                    <video controls autoplay muted>
+                        <source src="{{ asset('storage/' . $stone->media[0]) }}" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                @else
+                    <img src="{{asset('storage/' . $stone->media[0])}}" alt="{{ $stone->name }}">
+                @endif
                 <p class="text-center margin-top-10px">{{$stone->name}}</p>
                 <p class="text-center margin-top-10px">{{number_format($stone->price, 0, '', ' ')}} руб.</p>
                 <div class="invisible_card black">
                     <div class="catalog_item">
                         <a href="{{route('stones.item', ['article' => $stone['article']])}}">
-                            <img src="{{asset('storage/' . $stone->next_photo)}}" alt="{{$stone->name}}">
+                            @if(str_ends_with(strtolower($stone->media[1]), '.mp4'))
+                                <video controls autoplay muted>
+                                    <source src="{{ asset('storage/' . $stone->media[1]) }}" type="video/mp4">
+                                    Ваш браузер не поддерживает видео.
+                                </video>
+                            @else
+                                <img src="{{asset('storage/' . $stone->media[1])}}" alt="{{ $stone->name }}">
+                            @endif
                         </a>
                         <p class="text-center margin-top-10px">{{$stone->name}}</p>
                         <p class="text-center margin-top-10px">{{number_format($stone->price, 0, '', ' ')}} руб.</p>

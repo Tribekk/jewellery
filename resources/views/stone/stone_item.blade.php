@@ -4,19 +4,33 @@
     <div class="stone_item_flex">
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
-                <img alt="{{$item->name}}" src="/storage/{{asset($item->preview_photo)}}"
-                     data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"
-                     aria-label="Slide 1"></img>
-                <img src="/storage/{{asset($item->next_photo)}}" data-bs-target="#carouselExampleIndicators"
-                     data-bs-slide-to="1" aria-label="Slide 2" alt="{{$item->name}}">
+                @foreach($item->media as $index=>$mediaElement)
+                    @if(str_ends_with(strtolower($mediaElement), '.mp4'))
+                        <video data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$index}}" class="@if($index == 0) active @endif"
+                               aria-current="true" aria-label="Slide {{$index}}">
+                            <source src="{{ asset('storage/' . $mediaElement) }}" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    @else
+                        <img src="{{ asset('storage/' . $mediaElement) }}" alt="{{ $item->name }}"
+                             data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$index}}" class="@if($index == 0) active @endif"
+                             aria-current="true" aria-label="Slide {{$index}}">
+                    @endif
+                @endforeach
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/storage/{{asset($item->preview_photo)}}" class="d-block w-100" alt="{{$item->name}}">
+                @foreach($item->media as $index=>$mediaElement)
+                    <div class="carousel-item @if($index == 0) active @endif">
+                    @if(str_ends_with(strtolower($mediaElement), '.mp4'))
+                        <video controls>
+                            <source src="{{ asset('storage/' . $mediaElement) }}" type="video/mp4" class="d-block w-100">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    @else
+                        <img src="{{ asset('storage/' . $mediaElement) }}" alt="{{ $item->name }}" class="d-block w-100">
+                    @endif
                 </div>
-                <div class="carousel-item">
-                    <img src="/storage/{{asset($item->next_photo)}}" class="d-block w-100" alt="{{$item->name}}">
-                </div>
+                @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="prev">

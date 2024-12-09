@@ -26,12 +26,13 @@ class StoneModel extends Model
             'price',
             'visible',
             'article',
-            'preview_photo',
-            'next_photo',
+            'media',
             'color_index',
             'type_index',
         ];
-
+    protected $casts = [
+        'media' => 'array', // Автоматическое преобразование JSON в массив и обратно
+    ];
     public function colorBelongsTo(): BelongsTo
     {
         return $this->belongsTo(ColorStone::class, 'color_index', 'uriName');

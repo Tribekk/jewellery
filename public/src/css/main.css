@@ -34,10 +34,20 @@ body{
     font-family: 'CormorantSC', Georgia, serif !important;
     line-height: 1.6;
     background:
-        linear-gradient(rgba(22, 61, 52, .9), rgba(22, 61, 52, .9)), /* Полупрозрачный цвет */
-        url('/src/img/background.png'); /* Ваше изображение */
-    background-size: contain; /* Растягиваем изображение */
+        linear-gradient(rgba(22, 61, 52, .9), rgba(22, 61, 52, .9)),
+        url('/src/img/background.png');
+    background-size: 500px; /* Растягиваем изображение */
     background-position: center;
+    animation: backgroundPulse 10s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundPulse {
+    from {
+        background-size: 500px;
+    }
+    to {
+        background-size: 1000px;
+    }
 }
 /* header style*/
 header {
@@ -312,7 +322,7 @@ span.white-highlight {
     position: relative;
 }
 
-.catalog_item img {
+.catalog_item img,  .catalog_item video{
     width: 100%;
 }
 

@@ -9,6 +9,8 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\ViewColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -91,16 +93,10 @@ class StoneModelResource extends Resource
                     ->label('Артикул')
                     ->disabled()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('preview_photo')
-                    ->label('Главное фото')
-                    ->required()
-                    ->image()
-                    ->imageEditor(),
-                Forms\Components\FileUpload::make('next_photo')
-                    ->label('Доп. фото')
-                    ->required()
-                    ->image()
-                    ->imageEditor(),
+                Forms\Components\FileUpload::make('media')
+                    ->label('Медиафайлы')
+                    ->multiple() // Позволяет загружать несколько файлов
+                    ->acceptedFileTypes(['image/*', 'video/*']), // Разрешены только фото и видео
             ]);
     }
 
@@ -164,12 +160,12 @@ class StoneModelResource extends Resource
                 Tables\Columns\TextColumn::make('article')
                     ->label('Артикул')
                     ->searchable(),
-
-                Tables\Columns\ImageColumn::make('preview_photo')
-                    ->label('Главное фото'),
-
-                Tables\Columns\ImageColumn::make('next_photo')
-                    ->label('Следующее фото'),
+                ImageColumn::make('media.0') // Первое фото (если есть)
+                ->label('Превью')
+                    ->disk('public'), // Указать диск
+                ViewColumn::make('media') // Отобразить список медиа
+                ->label('Медиа')
+                    ->view('components.media-list'), // Пользовательский компонент для отображения медиа
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Дата создания')

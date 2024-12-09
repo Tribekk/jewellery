@@ -16,8 +16,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ColorSeeder::class,
             CutSeeder::class,
-            TypeSeeder::class,
-            StoneSeeder::class
+            TypeSeeder::class
         ]);
     }
 }
