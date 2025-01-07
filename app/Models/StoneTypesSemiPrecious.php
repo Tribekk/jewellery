@@ -5,20 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class JewelryItems extends Model
+class StoneTypesSemiPrecious extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'name',
+        'uriName',
+        'picture',
         'description',
-        'materials',
-        'weight',
-        'article',
-        'price',
-        'visible',
-        'media',
     ];
-    protected $casts =[
-      'media' => 'array',
-    ];
+
 }

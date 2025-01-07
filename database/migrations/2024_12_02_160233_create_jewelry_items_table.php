@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('jewelry_items', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique(); // Название изделия
+            $table->text('description'); // Описание
+            $table->json('materials'); // Материалы (массив)
+            $table->float('weight'); // Вес
+            $table->string('article')->unique(); // Артикул
+            $table->integer('price'); // Цена
+            $table->boolean('visible')->default(true); // Признак видимости товара
+            $table->json('media')->nullable(); // Мультимедиа (фото и видео)
             $table->timestamps();
         });
     }

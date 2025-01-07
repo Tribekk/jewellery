@@ -95,6 +95,7 @@ class StoneModelResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('media')
                     ->label('Медиафайлы')
+                    ->reorderable()
                     ->multiple() // Позволяет загружать несколько файлов
                     ->acceptedFileTypes(['image/*', 'video/*']), // Разрешены только фото и видео
             ]);

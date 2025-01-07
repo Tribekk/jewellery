@@ -28,6 +28,7 @@ return new class extends Migration
             $table->boolean('visible')->default(true); // Признак видимости товара
             $table->string('article')->unique(); // Артикул
             $table->json('media'); // фото и видео
+            $table->boolean('is_certified')->default(false); // Наличие сертификата
             $table->string('color_index');
             $table->string('type_index');
             $table->timestamps();

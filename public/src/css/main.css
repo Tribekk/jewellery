@@ -38,7 +38,7 @@ body{
         url('/src/img/background.png');
     background-size: 500px; /* Растягиваем изображение */
     background-position: center;
-    animation: backgroundPulse 10s infinite alternate ease-in-out;
+    animation: backgroundPulse 100s infinite alternate ease-in-out;
 }
 
 @keyframes backgroundPulse {
