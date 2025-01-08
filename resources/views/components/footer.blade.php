@@ -9,6 +9,7 @@
                 <li><p><a href="{{route('encyclopedia')}}">Энциклопедия</a></p></li>
                 <li><p><a href="{{route('blog')}}">Блог</a></p></li>
                 <li><p><a href="{{route('StonesAndDecorations')}}">Новости</a></p></li>
+                <li><p><a href="{{route('offer')}}">Публичная оферта</a></p></li>
                 <li><p><a href="{{route('about')}}">О компании</a></p></li>
                 <li><p><a href="{{route('contact')}}">Контакты</a></p></li>
             </ul>

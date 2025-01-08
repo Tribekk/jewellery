@@ -64,6 +64,13 @@ Route::prefix('blog')->group(function () {
     })->name('blog');
 });
 
+//ПУБЛИЧНАЯ ОФЕРТА
+Route::prefix('offer')->group(function (){
+   Route::get('/', function (){
+      return view('offer.offer');
+   })->name('offer');
+});
+
 //Энциклопедия
 
 Route::prefix('encyclopedia')->group(function () {
