@@ -1,9 +1,9 @@
-<x-header message="Партнёрство с Carduus Carat"/>
+<x-header message="Партнёрство с Carduus Carin"/>
 <link rel="stylesheet" href="{{asset('src/css/B2B.css')}}">
 <section class="partners_CarduusCarat">
     <div class="container-lg">
         <h1>Приглашение к сотрудничеству</h1>
-        <p>Ювелирная компания <span class="highlight">Carduus Carat</span> приглашает ювелиров и ювелирные заводы к сотрудничеству!</p>
+        <p>Ювелирная компания <span class="highlight">Carduus Carin</span> приглашает ювелиров и ювелирные заводы к сотрудничеству!</p>
 
         <h2>Что мы предлагаем:</h2>
 

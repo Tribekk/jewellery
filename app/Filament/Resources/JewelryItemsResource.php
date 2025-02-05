@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\JewelryItemsResource\Pages;
 use App\Filament\Resources\JewelryItemsResource\RelationManagers;
+use App\Models\JewellerMaterials;
 use App\Models\JewelryItems;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -16,6 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class JewelryItemsResource extends Resource
 {
     protected static ?string $model = JewelryItems::class;
+    protected static ?string $pluralLabel = 'Украшения';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -24,27 +26,40 @@ class JewelryItemsResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label('Название')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
+                    ->label('Описание')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('materials')
+                Forms\Components\Select::make('materials')
+                    ->label('Материалы')
+                    ->multiple()
+                    ->options(
+                        JewellerMaterials::pluck('name', 'id') // Загрузка всех материалов
+                    )
+                    ->preload()
                     ->required(),
                 Forms\Components\TextInput::make('weight')
+                    ->label('Масса')
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('article')
+                    ->label('Артикул')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('price')
+                    ->label('Цена')
                     ->required()
                     ->numeric()
-                    ->prefix('$'),
+                    ->prefix('руб.'),
                 Forms\Components\Toggle::make('visible')
+                    ->label('Видимость')
                     ->required(),
-                Forms\Components\TextInput::make('media'),
+                Forms\Components\TextInput::make('media')
+                    ->label('фото/видео'),
             ]);
     }
 
@@ -53,22 +68,29 @@ class JewelryItemsResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label('Название')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('weight')
+                    ->label('Масса')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('article')
+                    ->label('Артикул')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
+                    ->label('Цена')
                     ->money()
                     ->sortable(),
                 Tables\Columns\IconColumn::make('visible')
+                    ->label('Видимость')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Дата создания')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Дата обновления')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

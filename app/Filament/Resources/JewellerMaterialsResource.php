@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class JewellerMaterialsResource extends Resource
 {
     protected static ?string $model = JewellerMaterials::class;
+    protected static ?string $pluralLabel = 'Драг. металлы';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -24,14 +25,18 @@ class JewellerMaterialsResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label('Название')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('uriName')
+                    ->label('Название в адресной строке')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('picture')
+                    ->label('Картинка')
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
+                    ->label('Описание')
                     ->maxLength(65535)
                     ->columnSpanFull(),
             ]);
@@ -42,16 +47,21 @@ class JewellerMaterialsResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label('Название')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('uriName')
+                    ->label('Название в адресной строке')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('picture')
+                    ->label('Картинка')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Дата создания')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Дата обновления')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

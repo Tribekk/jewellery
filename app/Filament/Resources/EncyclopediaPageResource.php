@@ -17,27 +17,33 @@ use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 class EncyclopediaPageResource extends Resource
 {
     protected static ?string $model = EncyclopediaPage::class;
+    protected static ?string $pluralLabel = 'Связная страница энциклопедии';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('id_encyclopedia')
+                    ->label('Связь с энциклопедией')
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('name')
+                    ->label('Название')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('uriName')
+                    ->label('Название в адресной строке')
                     ->required()
                     ->maxLength(255),
                 TinyEditor::make('dataDesktop')
+                    ->label('Страница на компьютере')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 TinyEditor::make('dataMobile')
+                    ->label('Страница на телефоне')
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
@@ -49,17 +55,22 @@ class EncyclopediaPageResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id_encyclopedia')
+                    ->label('Связь с энциклопедией')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
+                    ->label('Название')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('uriName')
+                    ->label('Название в адресной строке')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Дата создания')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Дата обновления')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

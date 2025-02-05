@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class SemiPreciousStoneCategoriesResource extends Resource
 {
+
     protected static ?string $model = SemiPreciousStoneCategories::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

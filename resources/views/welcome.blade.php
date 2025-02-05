@@ -4,7 +4,7 @@
     <div class="about banner">
         <img src="{{asset('src/img/main_banners/about.webp')}}" alt="">
         <div class="text_banner">
-            <h3>Carduus Carat — традиции, искусство, совершенство!</h3>
+            <h3>Carduus Carin — традиции, искусство, совершенство!</h3>
             <h4>Узнайте нашу историю и философию создания ювелирных шедевров.</h4>
             <a href="{{route('about')}}">Читать больше ></a>
         </div>
