@@ -48,7 +48,7 @@
                 {{$item->name}}
             </h2>
             <p class="text-center price">
-                Цена: {{number_format($item->price, 0, '', ' ')}} Руб.
+                Цена: {{number_format($item->price, 0, '', ' ')}} руб.
             </p>
             <a class="button" href="{{ route('cart.add', ['article' => $item->article]) }}">Добавить в корзину</a>
             <hr>
