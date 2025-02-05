@@ -53,7 +53,7 @@
             <a class="button" href="{{ route('cart.add', ['article' => $item->article]) }}">Добавить в корзину</a>
             <hr>
             <h3 class="text-center">Характеристики</h3>
-            <p>Масса: {{$item->mass}} карат</p>
+            <p>Масса: {{$item->mass}} грамм</p>
             <p>Цвет: {{$item->color}}</p>
             <p>Чистота: {{$item->purity}}</p>
             <p>Облагораживание: {{$item->ennoblement}}</p>
