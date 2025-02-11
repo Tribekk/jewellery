@@ -1,4 +1,4 @@
-<x-header message="Контакты"/>
+<x-header message="Контакты" des="fjdo"/>
 <link rel="stylesheet" href="{{asset('src/css/contact.css')}}">
 <section class="contacts black_background">
     <div class="container-lg">

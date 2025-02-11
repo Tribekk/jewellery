@@ -9,7 +9,17 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     @vite('resources/css/app.css')
     <title>{{$title}}</title>
+    <meta name="description" content="{{$description}}">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ4ED7TYHV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SZ4ED7TYHV');
+</script>
 <body>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >

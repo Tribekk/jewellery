@@ -1,4 +1,6 @@
-<x-header message="Каталог камней"/>
+<x-header message="Купить гранёные камни – сапфиры, рубины, изумруды, топазы | CarduusCarin"
+          des="Большой выбор гранёных камней – сапфиры, рубины, изумруды, топазы, аметисты и другие. Доставка по России. Гарантия качества!"
+keys="гранёные камни, купить гранёные камни, сапфир купить, рубин цена, изумруд натуральный, аметист камень, топаз гранёный, турмалин"/>
 <link rel="stylesheet" href="{{asset('src/css/stone.css')}}">
 <section class="content container-lg mx-auto">
     <div class="catalog d-flex wrap">
@@ -37,7 +39,8 @@
                             <a href="{{route('stones.item', ['article' => $stone['article']])}}" class="button">Подробнее</a>
                         </p>
                         <p>
-                            <a href="{{ route('cart.add', ['article' => $stone->article]) }}" class="button">В корзину</a>
+                            <a href="{{ route('cart.add', ['article' => $stone->article]) }}" class="button">В
+                                корзину</a>
                         </p>
                     </div>
                 </div>

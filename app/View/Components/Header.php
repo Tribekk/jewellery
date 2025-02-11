@@ -13,10 +13,14 @@ class Header extends Component
      * Create a new component instance.
      */
     public string $title = "";
+    public string $description = "";
+    public string $keyWords = "";
 
-    public function __construct($message)
+    public function __construct($message = " ", $des = " ", $keys = " ")
     {
-        $this->title = $message;
+        $this->title = $message ?? "";
+        $this->description = $des ?? "";
+        $this->keyWords = $keys ?? "";
     }
 
     /**
