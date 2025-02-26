@@ -77,19 +77,9 @@
                             <a class="nav-link" href="{{route('about')}}">О нас</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{{route('stone')}}" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="{{route('stone')}}">
                                 Драгоценные камни
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                @foreach($typesWithColors as $typeWithColors)
-                                    <li>
-                                        <a class="dropdown-item" href="{{route('stones.filter', ['type' => $typeWithColors['uriName']])}}">{{ $typeWithColors['type'] }}</a>
-                                @endforeach
-                                        <hr>
-                                        <a class="dropdown-item" href="{{route('stone')}}">Смотреть все</a>
-                                    </li>
-                            </ul>
                         </li>
                         <li>
                             <a class="nav-link" href="{{route('StonesAndDecorations')}}">Полудрагоценные камни</a>
