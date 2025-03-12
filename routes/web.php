@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\B2BController;
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CertificationController;
 use App\Http\Controllers\ContactController;
@@ -59,9 +60,8 @@ Route::prefix('about')->group(function () {
 //Блог
 
 Route::prefix('blog')->group(function () {
-    Route::get('/', function () {
-        return view('blog.blog');
-    })->name('blog');
+    Route::get('/', [BlogsController::class, 'index'])->name('blog');
+    Route::get('/{page}', [BlogsController::class, 'viewPage'])->name('blogPage');
 });
 
 //ПУБЛИЧНАЯ ОФЕРТА

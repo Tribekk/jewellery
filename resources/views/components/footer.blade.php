@@ -18,8 +18,8 @@
             <h5>МЫ В СОЦСЕТЯХ</h5>
             <ul>
                 <li><a href="https://vk.com/club228334857" target="_blank" class="social-icon instagram">ВКонтакте</a></li>
-                <li><a href="https://t.me/carduuscarat" target="_blank"  class="social-icon facebook">Telegram</a></li>
-                <li><a href="#" target="_blank"  class="social-icon twitter">Instagram</a></li>
+                <li><a href="https://t.me/carduuscarin" target="_blank"  class="social-icon facebook">Telegram</a></li>
+                <li><a href="https://www.instagram.com/carduus_carin?igsh=MXFqYWRvNnMwcXNvaA==" target="_blank"  class="social-icon twitter">Instagram</a></li>
             </ul>
         </div>
         <div class="footer-contact">

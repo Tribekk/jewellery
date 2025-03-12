@@ -78,9 +78,17 @@
                             <a class="nav-link" href="{{route('about')}}">О нас</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{route('stone')}}">
+                            <a class="nav-link dropdown-toggle" href="{{route('stone')}}" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
                                 Драгоценные камни
                             </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li>
+                                    <a class="dropdown-item" href="{{route('stone')}}">Не гранённые</a>
+                                </li>
+                            </ul>
+                            </a>
+
                         </li>
                         <li>
                             <a class="nav-link" href="{{route('StonesAndDecorations')}}">Полудрагоценные камни</a>

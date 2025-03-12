@@ -20,7 +20,7 @@ class StoneModelResource extends Resource
     protected static ?string $model = StoneModel::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $pluralLabel = "Драгоценные не гранённые камни";
     public static function form(Form $form): Form
     {
         return $form
@@ -48,7 +48,7 @@ class StoneModelResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('mass')
                     ->label('Вес')
-                    ->prefix('карат')
+                    ->prefix('грамм')
                     ->required()
                     ->numeric(),
                 Forms\Components\Textarea::make('color')

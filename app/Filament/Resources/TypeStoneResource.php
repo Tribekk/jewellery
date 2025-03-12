@@ -18,6 +18,7 @@ class TypeStoneResource extends Resource
     protected static ?string $model = TypeStone::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $pluralLabel = "Типы камней";
 
     public static function form(Form $form): Form
     {
