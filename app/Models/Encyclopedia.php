@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Encyclopedia extends Model
@@ -15,10 +16,13 @@ class Encyclopedia extends Model
         'name',
         'dataDesktop',
         'dataMobile',
+        'titleSEO',
+        'descriptionSEO',
+        'keyWordSEO',
     ];
 
-    public function typeStones() :HasMany{
-            return $this->hasMany(TypeStone::class, 'uriName', 'type_stone');
+    public function typeStones() : BelongsTo {
+        return $this->belongsTo(TypeStone::class, 'type_stone', 'uriName');
     }
 
     public function pages() :HasMany{

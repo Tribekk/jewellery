@@ -25,10 +25,10 @@ class EncyclopediaResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('type_stone')
+                Forms\Components\Select::make('type_stone')
                     ->label('Тип камня')
                     ->required()
-                    ->maxLength(255),
+                    ->relationship('typeStones', 'name'),
                 Forms\Components\FileUpload::make('picture')
                     ->label('Картинка привью')
                     ->required()
@@ -46,6 +46,20 @@ class EncyclopediaResource extends Resource
                     ->label('Страница на телефоне')
                     ->required()
                     ->columnSpanFull(),
+                Forms\Components\TextInput::make('descriptionSEO')
+                    ->label('Описание для СЕО')
+                    ->unique()
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('titleSEO')
+                    ->label('Заголовок браузера для СЕО')
+                    ->unique()
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('keyWordSEO')
+                    ->label('Ключевые слова для СЕО')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -72,6 +86,12 @@ class EncyclopediaResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('descriptionSEO')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('titleSEO')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('keyWordsSEO')
+                    ->searchable(),
             ])
             ->filters([
                 //

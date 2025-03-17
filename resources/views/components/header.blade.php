@@ -10,6 +10,7 @@
     @vite('resources/css/app.css')
     <title>{{$title}}</title>
     <meta name="description" content="{{$description}}">
+    <meta name="keywords" content="{{$keyWords}}" />
     <script src="//code.jivo.ru/widget/eGMaekzwE6" async></script>
 </head>
 <!-- Google tag (gtag.js) -->

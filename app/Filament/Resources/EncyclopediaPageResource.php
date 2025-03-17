@@ -47,6 +47,20 @@ class EncyclopediaPageResource extends Resource
                     ->required()
                     ->maxLength(65535)
                     ->columnSpanFull(),
+                Forms\Components\TextInput::make('descriptionSEO')
+                    ->label('Описание для СЕО')
+                    ->unique()
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('titleSEO')
+                    ->label('Заголовок браузера для СЕО')
+                    ->unique()
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('keyWordsSEO')
+                    ->label('Ключевые слова для СЕО')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -74,6 +88,12 @@ class EncyclopediaPageResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('descriptionSEO')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('titleSEO')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('keyWordsSEO')
+                    ->searchable(),
             ])
             ->filters([
                 //

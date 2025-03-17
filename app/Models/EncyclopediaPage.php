@@ -15,5 +15,8 @@ class EncyclopediaPage extends Model
         'uriName',
         'dataDesktop',
         'dataMobile',
+        'titleSEO',
+        'descriptionSEO',
+        'keyWordSEO',
     ];
 }
