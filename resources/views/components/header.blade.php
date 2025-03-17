@@ -57,13 +57,6 @@
             <div class="right_menu">
                 <a href="/"><img src="{{asset('src/img/logotypes/location.svg')}}" alt="Местонахождение"></a>
                 <a href="tel:+79058436464"><img src="{{asset('src/img/logotypes/phone.svg')}}" alt="Телефон"></a>
-                @if(session()->has('cart') and sizeof(session('cart'))>0)
-                    <a class="cart_href" href="{{route('cart')}}"><img src="{{asset('src/img/logotypes/cart.svg')}}" alt="Корзина"><span class="badge text-bg-secondary">
-                        {{ sizeof(session('cart')) }}
-                    </span></a>
-                @else
-                    <a href="{{route('cart')}}"><img src="{{asset('src/img/logotypes/cart.svg')}}" alt="Корзина"></a>
-                @endif
             </div>
             <div class="offcanvas offcanvas-start text-bg-dark black_background" tabindex="-1" id="offcanvasDarkNavbar"
                  aria-labelledby="offcanvasDarkNavbarLabel">
@@ -85,7 +78,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li>
-                                    <a class="dropdown-item" href="{{route('stone')}}">Не гранённые</a>
+                                    <a class="dropdown-item" href="{{route('stone')}}">Сырьё</a>
                                 </li>
                             </ul>
                             </a>
