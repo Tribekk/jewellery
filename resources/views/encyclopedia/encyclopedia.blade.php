@@ -6,8 +6,8 @@ keys="драгоценные камни, энциклопедия камней, 
         @foreach($encyclopedias as $encyclopedia)
             <div class="col-lg-2 text-center">
                 <a href="{{route('view-page-encyclopedia', ['page' => $encyclopedia->type_stone])}}">
-                    <img class="w-50 mx-auto" src="storage/{{$encyclopedia->picture}}" alt="{{$encyclopedia->name}}">
-                    <h5>{{mb_strtoupper($encyclopedia->name)}}</h5>
+                    <img style="width: 75px; margin: auto" src="storage/{{$encyclopedia->picture}}" alt="{{$encyclopedia->name}}">
+                    <h5 class="mb-auto">{{mb_strtoupper($encyclopedia->name)}}</h5>
                 </a>
                 @foreach($encyclopedia->pages as $page)
                     <a href="{{route('view-page-encyclopedia', ['page' => $encyclopedia->type_stone, 'dopPage' => $page->uriName])}}">
