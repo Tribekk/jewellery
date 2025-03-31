@@ -46,6 +46,15 @@
             }
         });
 
+        $('.desktop_menu a').each(function () {
+            const href = $(this).attr('href').replace(basePath, ''); // Убираем базовый URL из href
+
+            // Проверяем, чтобы href был началом текущего пути
+            if (currentPath.startsWith(href) && currentPath !== '/') {
+                $(this).addClass('active');
+            }
+        });
+
         // Меняем значение через заданное время
         setTimeout(function () {
             $('body').css('background-size', '1000px');

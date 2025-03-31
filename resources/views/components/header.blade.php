@@ -107,4 +107,15 @@
             </div>
         </div>
     </nav>
+    <div class="desktop_menu">
+        <a href="{{route('about')}}">О нас</a>
+        <a href="{{route('stone')}}">Драгоценные камни</a>
+        <a href="{{route('StonesAndDecorations')}}">Полудрагоценные камни</a>
+        <a href="{{route('JewelryCatalog')}}">Ювелирные изделия</a>
+        <a href="{{route('B2B')}}">Партнёрство B2B</a>
+        <a href="{{route('contact')}}">Контакты</a>
+        <a href="{{route('delivery')}}">Оплата и доставка</a>
+        <a href="{{route('certification')}}">Сертификация камней</a>
+    </div>
+    <hr>
 </header>
