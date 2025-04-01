@@ -1,28 +1,39 @@
-.partners_CarduusCarat h1, h2 {
+.partners_CarduusCarat h1{
     text-align: center;
+    font-size: 36px;
+    font-family: 'prata', serif;
+    margin-bottom: 30px;
 }
-.partners_CarduusCarat h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
+.partners_CarduusCarat p{
+    font-size: 14px;
+    font-family: 'montserrat', sans-serif;
+    color: white;
+    margin-top: 15px;
 }
-.partners_CarduusCarat h2 {
-    font-size: 1.5em;
-    margin-top: 1.5em;
-    text-align: left;
+.partners_CarduusCarat h2{
+    margin-top: 50px;
+    font-family: 'Prata', serif;
+    font-size: 24px;
+    color: #B1824C;
 }
-.partners_CarduusCarat p, ul{
-    margin: 1em 0;
+.partners_CarduusCarat .row h3{
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: 'prata', sans-serif;
+    color: #B1824C;
 }
-.partners_CarduusCarat ul {
-    padding-left: 20px;
-    list-style-type: disc;
+.partners_CarduusCarat img{
+    width: 340px;
+    height: 304px;
+    object-fit: cover;
+    object-position: right;
 }
-.partners_CarduusCarat .highlight {
-    font-weight: bold;
-}
-.partners_CarduusCarat .contact {
-    font-weight: bold;
-    font-size: 1.1em;
-    display: inline-block;
-    margin-top: 1em;
+@media screen and (max-width: 757px){
+    .partners_CarduusCarat .row .col-3{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .partners_CarduusCarat img{
+        width: 100%;
+    }
 }
