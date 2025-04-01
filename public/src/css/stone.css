@@ -10,6 +10,7 @@
 .banner{
     width: 314px;
     height: 400px;
+    margin-right: 20px;
     cursor: pointer;
 }
 .catalog_item:hover{
