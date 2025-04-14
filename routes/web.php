@@ -9,6 +9,7 @@ use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\EncyclopediaController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SemiPreciousStonesController;
 use App\Http\Controllers\StoneModelController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,11 +35,10 @@ Route::prefix('/stone')->group(function () {
     Route::get('/{article}', [StoneModelController::class, 'show'])->where('article', '[a-zA-Z0-9-]+')->name('stones.item');
 });
 
-//Камни и украшения
+//Полудрагоценные камни
 Route::prefix('decorations')->group(function () {
-    Route::get('/', function () {
-        return view('StonesAndDecorations.StonesAndDecorations');
-    })->name('StonesAndDecorations');
+    Route::get('/', [SemiPreciousStonesController::class, 'index'])->name('StonesAndDecorations');
+    Route::get('/{article}', [SemiPreciousStonesController::class, 'show'])->where('article', '[a-zA-Z0-9-]+')->name('StonesAndDecorations.item');
 });
 
 //Каталог ювелирных изделий

@@ -19,6 +19,8 @@ class StoneTypesSemiPreciousResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $pluralLabel = "Тип драгоценных камней";
+
     public static function form(Form $form): Form
     {
         return $form

@@ -24,7 +24,7 @@ class SemiPreciousStones extends Model
     ];
 
     protected $casts = [
-      'media' => 'array' ,
+        'media' => 'array', // Автоматическое преобразование JSON в массив и обратно
     ];
 
     public function typeBelongsTo(): BelongsTo{
@@ -33,5 +33,24 @@ class SemiPreciousStones extends Model
 
     public function categoryBelongsTo(): BelongsTo{
         return $this->belongsTo(SemiPreciousStoneCategories::class, 'stone_category_index', 'uriName');
+    }
+
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::saving(function ($model) {
+            if (empty($model->article)) {
+                // Извлекаем первые 2 буквы типа камня
+                $typeAbbreviation = substr($model->typeBelongsTo->uriName ?? '', 0, 2);
+                // Берем количество карат и округляем его до 2-х знаков
+                $mass = number_format($model->mass);
+                // Используем id записи, если он доступен, или создаем временный идентификатор
+                $id = $model->id ?? StoneModel::max('id') + 1;
+
+                // Формируем артикул
+                $model->article = strtoupper($typeAbbreviation) . '-' . $mass . '-' . $id;
+            }
+        });
     }
 }

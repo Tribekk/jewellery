@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\SemiPreciousStoneResource\Pages;
+namespace App\Filament\Resources\SemiPreciousStonesResource\Pages;
 
-use App\Filament\Resources\SemiPreciousStoneResource;
+use App\Filament\Resources\SemiPreciousStonesResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
 class ListSemiPreciousStones extends ListRecords
 {
-    protected static string $resource = SemiPreciousStoneResource::class;
+    protected static string $resource = SemiPreciousStonesResource::class;
 
     protected function getHeaderActions(): array
     {

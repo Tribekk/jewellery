@@ -20,6 +20,8 @@ class SemiPreciousStoneCategoriesResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $pluralLabel = "Категории для драгоценных камней";
+
     public static function form(Form $form): Form
     {
         return $form
