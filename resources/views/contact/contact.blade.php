@@ -6,7 +6,7 @@
         <section class="bread_crumb">
             <a class="parent" href="{{route('index')}}">Главная</a>
             <p class="parent">/</p>
-            <a class="child" href="{{route('about')}}">О нас</a>
+            <a class="child" href="{{route('contact')}}">Контакты</a>
             <hr>
         </section>
         <div class="row">
