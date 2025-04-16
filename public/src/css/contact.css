@@ -1,39 +1,37 @@
-h1, h2 {
-    color: #007BFF;
+.contacts h1{
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
 }
-.details, .intro, .info-block {
-    background: #f9f9f93d;
-    border-left: 4px solid #007BFF;
-    padding: 15px;
-    margin: 15px 0;
-}
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.info-block {
-    flex: 1;
-    min-width: 250px;
-}
-.info-block h3 {
-    margin-top: 0;
-}
-.map {
-    margin-top: 30px;
-}
-.map iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-}
-.bank-details table {
-    width: 100%;
-    border-collapse: collapse;
+
+.contacts .col-lg-6 p{
+    font-size: 16px;
+    font-family: 'CormorantSC', Georgia, serif;
+    color: white;
     margin-top: 15px;
 }
-.bank-details th, .bank-details td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
+
+.contacts .col-lg-6 h2{
+    font-size: 24px;
+    color: #B1824C;
+    margin-top: 50px;
+}
+.contacts .col-lg-6 p strong{
+    width: 100%;
+    display: block;
+}
+.contacts .col-lg-6 h3{
+    color: white;
+    margin-top: 10px;
+}
+.contacts .col-lg-6 a{
+    text-decoration: underline white;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.contacts .col-lg-6 .bank-details div{
+    margin-top: 20px;
+}
+.contacts .col-lg-6 .bank-details div p{
+    margin: 0;
 }
