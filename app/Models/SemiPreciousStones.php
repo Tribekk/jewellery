@@ -46,7 +46,7 @@ class SemiPreciousStones extends Model
                 // Берем количество карат и округляем его до 2-х знаков
                 $mass = number_format($model->mass);
                 // Используем id записи, если он доступен, или создаем временный идентификатор
-                $id = $model->id ?? StoneModel::max('id') + 1;
+                $id = $model->id ?? SemiPreciousStones::max('id') + 1;
 
                 // Формируем артикул
                 $model->article = strtoupper($typeAbbreviation) . '-' . $mass . '-' . $id;

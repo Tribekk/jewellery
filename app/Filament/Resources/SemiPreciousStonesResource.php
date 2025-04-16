@@ -59,8 +59,7 @@ class SemiPreciousStonesResource extends Resource
                 Forms\Components\FileUpload::make('media')
                     ->label('Медиафайлы')
                     ->reorderable()
-                    ->multiple() // Позволяет загружать несколько файлов
-                    ->acceptedFileTypes(['image/*', 'video/*']), // Разрешены только фото и видео
+                    ->multiple(), // Разрешены только фото и видео
                 Forms\Components\Toggle::make('is_certified')
                     ->label('Сертифицирован')
                     ->required(),
